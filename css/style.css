@@ -1,16 +1,88 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,8 +92,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -29,16 +110,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -46,6 +131,72 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.top-nav {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #393E40;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.top-nav-element {
+  color: #111111;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #393E40;
+}
+
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #393E40;
+  width: 100vw;
+  padding: 20px;
+}
+
+.bottom-nav-header {
+  font-size: 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.bottom-nav-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #CDCFCF;
+  gap: 10px;
+}
+
+.rectangle {
+  background: linear-gradient(90deg, red 0 10%, gray 10% 90%);
+  height: 2px;
+  width: 20vw;
 }
 
 /*# sourceMappingURL=style.css.map */

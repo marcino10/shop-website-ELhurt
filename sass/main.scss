@@ -1,7 +1,68 @@
-@use 'reset';
-@use 'colors' as *;
+@use "reset";
+@use "colors" as *;
 
-.top-nav{
-    background-color: $main-white;
+html {
+    font-size: 10px;
+}
 
+body {
+    font-family: sans-serif;
+}
+
+.top-nav {
+    width: 100%;
+    height: 50px;
+    border: 1px solid $additional-bgc;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.top-nav-element {
+    color: $main-font-color;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid $additional-bgc;
+}
+
+.bottom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $additional-bgc;
+    width: 100vw;
+    padding: 20px;
+}
+
+.bottom-nav-header {
+    font-size: 1rem;
+    color: $main-white;
+    text-transform: uppercase;
+}
+
+.bottom-nav-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color:$nav-font-color ;
+    gap: 10px;
+}
+
+.rectangle {
+    background: linear-gradient(90deg, red 0 10%, gray 10% 90%);
+    height: 2px;
+    width: 20vw;
 }
