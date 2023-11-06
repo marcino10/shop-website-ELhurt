@@ -98,4 +98,8 @@ table {
   opacity: 0;
 }
 
+.display-none {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

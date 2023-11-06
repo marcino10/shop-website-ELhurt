@@ -1,15 +1,11 @@
-const mainSliderLeftBtn = document.querySelector('.main-slider .slider-left-btn');
-const mainSliderRightBtn = document.querySelector('.main-slider .slider-right-btn');
+const mainSliderBtns = document.querySelectorAll('.slider-btn');
 const mainSlider = document.querySelector('.main-slider');
-const firstSlide = document.querySelector('.first-slide');
-const secondSlide = document.querySelector('.second-slide');
+const mainSlides = document.querySelectorAll('.main-slide');
+const mainSlidesText = document.querySelectorAll('.main-slide-text');
 
-let currentPhoto = 0;
-
-const changeSliderImage = () => {
-	firstSlide.classList.toggle('hide');
-	secondSlide.classList.toggle('hide');
+const changeSlider = () => {
+	mainSlides.forEach(slide => slide.classList.toggle('hide'));
+	mainSlidesText.forEach(text => text.classList.toggle('display-none'));
 };
 
-mainSliderLeftBtn.addEventListener('click', changeSliderImage);
-mainSliderRightBtn.addEventListener('click', changeSliderImage);
+mainSliderBtns.forEach(btn => btn.addEventListener('click', changeSlider));
