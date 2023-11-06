@@ -1,0 +1,22 @@
+{
+	"name": "shop-website-elhurt",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"sass": "sass --watch ./sass/main.scss:./css/style.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/marcino10/shop-website-ELhurt.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/marcino10/shop-website-ELhurt/issues"
+	},
+	"homepage": "https://github.com/marcino10/shop-website-ELhurt#readme",
+	"dependencies": {
+		"sass": "^1.69.5"
+	}
+}
