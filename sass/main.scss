@@ -18,9 +18,9 @@ body {
 }
 
 .main-slider {
-	position: relative;
-	width: 100%;
-	height: 400px;
+    position: relative;
+    width: 100%;
+    height: 400px;
 }
 
 .top-nav {
@@ -81,25 +81,77 @@ body {
 	width: 20vw;
 }
 .bottom-main {
-	background-image: url(../photos/whyUsBanner.png);
-	background-size: cover;
-	height: 500px;
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	color: $main-white;
-	align-items: center;
+    position: relative;
+    background-image: url(../photos/whyUsBanner.png);
+    background-size: cover;
+    height: 500px;
+    width: 100vw;
+    color: $main-white;
+    .main-btn {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        translate: -50%;
+        top: 75%;
+    }
+    h1 {
+        position: absolute;
+        font-size: 44px;
+        left: 50%;
+        translate: -50%;
+        bottom: 85%;
+    }
+    p {
+        position: absolute;
+        font-size: 18px;
+        text-align: center;
+        left: 50%;
+        translate: -50%;
+        top: 25%;
+        width: 800px;
+    }
 }
+.squares {
+    display: flex;
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    border: 2px solid gray;
+    flex-direction: row;
+    left: 50%;
+    translate: -50%;
+    top: 40%;
+}
+
 .main-btn {
-	width: 150px;
-	height: 50px;
-	background-color: tomato;
-	text-transform: uppercase;
+    width: 246px;
+    height: 55px;
+    background-color: $additional-element-color;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 1.5rem;
+    color: $main-white;
 }
-.text-in-button {
-	position: absolute;
-	top: 40%;
-	left: 15%;
+.text-in-btn {
+    position: absolute;
+    top: 36%;
+    left: 17%;
+    color: $main-white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.header-in-main-btn {
+    position: absolute;
+    font-size: 44px;
+    bottom: 15%;
+    text-align: center;
+}
+.bottom-main-rectangle {
+    position: absolute;
+    background: linear-gradient(90deg, lightgray 0 45%, red 45% 55%, lightgray 55% 100%);
+    height: 2px;
+    width: 100vw;
+    top: 20%;
 }
 
 .slider-btn {
@@ -147,11 +199,11 @@ body {
 }
 
 .hide {
-	opacity: 0;
+    opacity: 0;
 }
 
 .display-none {
-	display: none;
+    display: none;
 }
 
 .main-btn-slider {
