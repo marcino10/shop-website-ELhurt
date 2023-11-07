@@ -1,12 +1,18 @@
 @use 'reset';
 @use 'colors' as *;
-body{
-    font-family: sans-serif;
+
+* {
+	box-sizing: border-box;
 }
-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+
+body {
+	font-family: sans-serif;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 html {
@@ -15,6 +21,10 @@ html {
 
 body {
 	font-family: sans-serif;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 .main-slider {
@@ -56,9 +66,9 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	background-color: $additional-bgc;
 	width: 100vw;
 	padding: 20px;
+	background-color: $additional-bgc;
 }
 
 .bottom-nav-header {
@@ -75,11 +85,16 @@ body {
 	gap: 10px;
 }
 
+.bottom-nav-column-wrapper {
+	width: 25%;
+}
+
 .rectangle {
 	background: linear-gradient(90deg, red 0 10%, gray 10% 90%);
 	height: 2px;
-	width: 20vw;
+	width: 85%;
 }
+
 .bottom-main {
     position: relative;
     background-image: url(../photos/whyUsBanner.png);
@@ -111,6 +126,7 @@ body {
         width: 800px;
     }
 }
+
 .squares {
     display: flex;
     position: absolute;
@@ -184,9 +200,16 @@ body {
 	height: 100%;
 	opacity: 1;
 	background-size: cover;
-	background-position: left;
 	background-repeat: no-repeat;
 	transition: opacity 0.5s;
+	background: (90deg, black, grey 50%, white);
+}
+
+.darken-bg {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, black, transparent);
+	opacity: 75%;
 }
 
 .first-slide {
@@ -196,6 +219,7 @@ body {
 
 .second-slide {
 	background-image: url(../photos/slide_01.jpg);
+	background-position: left;
 }
 
 .hide {
@@ -233,77 +257,86 @@ body {
 		font-size: 36px;
 	}
 }
+
 .img {
-    margin-top: 20px;
-    margin-left: 30px;
+	margin-top: 20px;
+	margin-left: 30px;
 }
-.info{
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    padding: 15px;
-    gap: 3%;
-    width: 100%;
-    img{
-        width: 30%;
-        height: auto;
-        mask-image: linear-gradient(to right, rgba(0, 0, 0, 100) 5%,rgba(0,0,0,0.65) 100%);
-        -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 100) 5%,rgba(0,0,0,0.65) 100%);
-    }
-    button{
-        position: absolute;
-        width: 125px;
-        height: 25px;
-        background-color: #ffffff00;
-        color: $main-white;
-        cursor: pointer;
-        border:1px solid #fff;
-        z-index: 2;
-    }
-    p{
-        position: absolute;
-        color: #fff;
-        width: 175px;
-        height: 50px;
-        z-index: 2;
-    }
+
+.info {
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	padding: 15px;
+	gap: 3%;
+	width: 100%;
+	img {
+		width: 30%;
+		height: auto;
+		mask-image: linear-gradient(to right, rgba(0, 0, 0, 100) 5%, rgba(0, 0, 0, 0.65) 100%);
+		-webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 100) 5%, rgba(0, 0, 0, 0.65) 100%);
+	}
+	button {
+		position: absolute;
+		width: 125px;
+		height: 25px;
+		background-color: #ffffff00;
+		color: $main-white;
+		cursor: pointer;
+		border: 1px solid #fff;
+		z-index: 2;
+	}
+	p {
+		position: absolute;
+		color: #fff;
+		width: 175px;
+		height: 50px;
+		z-index: 2;
+	}
 }
+
 .imgbtn1 {
-    top: 75%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+	top: 75%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
+
 .imgbtn2 {
-    top: 75%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+	top: 75%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
+
 .imgbtn3 {
-    top: 75%;
-    left: 73%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+	top: 75%;
+	left: 73%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
+
 .imgtext1 {
-    top: 30%;
-    left: 3%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+	top: 30%;
+	left: 3%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
+
 .imgtext2 {
-    top: 30%;
-    left: 33%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+	top: 30%;
+	left: 33%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
+
 .imgtext3 {
-    top: 30%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+	top: 30%;
+	left: 65%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
+
 .info button:hover {
-    background-color: $additional-element-color;
+	background-color: $additional-element-color;
 }
