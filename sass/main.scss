@@ -10,9 +10,9 @@ body {
 }
 
 .main-slider {
-	position: relative;
-	width: 100%;
-	height: 400px;
+    position: relative;
+    width: 100%;
+    height: 400px;
 }
 
 .top-nav {
@@ -63,7 +63,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    color:$nav-font-color ;
+    color: $nav-font-color;
     gap: 10px;
 }
 
@@ -72,71 +72,120 @@ body {
     height: 2px;
     width: 20vw;
 }
-.bottom-main{
-    background-image:url(../photos/whyUsBanner.png) ;
+// tu jest ten cholera ten ta dolna część
+.bottom-main {
+    position: relative;
+    background-image: url(../photos/whyUsBanner.png);
     background-size: cover;
     height: 500px;
     width: 100vw;
-    display: flex;
-    justify-content: center;
     color: $main-white;
-    align-items: center;
+    .main-btn {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        translate: -50%;
+        top: 75%;
+    }
+    h1 {
+        position: absolute;
+        font-size: 44px;
+        left: 50%;
+        translate: -50%;
+        bottom: 85%;
+    }
+    p {
+        position: absolute;
+        font-size: 18px;
+        text-align: center;
+        left: 50%;
+        translate: -50%;
+        top: 25%;
+        width: 800px;
+    }
 }
-.bottom-main-button{
-    position: relative;
-    width: 150px;
-    height: 50px;
-    background-color: tomato;
-    margin-top: 20%;
-    text-transform: uppercase;
-}
-.text-in-button{
+.squares {
+    display: flex;
     position: absolute;
+    height: 150px;
+    width: 200px;
+    border: 2px solid gray;
+    flex-direction: row;
+    left: 50%;
+    translate: -50%;
     top: 40%;
-    left: 15%;
 }
-
+.main-btn {
+    width: 246px;
+    height: 55px;
+    background-color: $additional-element-color;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 1.5rem;
+    color: $main-white;
+}
+.text-in-btn {
+    position: absolute;
+    top: 36%;
+    left: 17%;
+    color: $main-white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.header-in-main-btn {
+    position: absolute;
+    font-size: 44px;
+    bottom: 15%;
+    text-align: center;
+}
+.bottom-main-rectangle {
+    position: absolute;
+    background: linear-gradient(90deg, lightgray 0 45%, red 45% 55%, lightgray 55% 100%);
+    height: 2px;
+    width: 100vw;
+    top: 20%;
+}
 
 .slider-btn {
-	position: absolute;
-	top: 50%;
-	translate: 0 -50%;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
 }
 
 .slider-left-btn {
-	left: 5px;
+    left: 5px;
 }
 
 .slider-right-btn {
-	right: 5px;
+    right: 5px;
 }
 
 .main-slide {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transition: opacity 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s;
 }
 
 .first-slide {
-	background-image: url(../photos/slide_01.jpg);
+    background-image: url(../photos/slide_01.jpg);
 }
 
 .second-slide {
-	background-image: url(../photos/slide_02.png);
+    background-image: url(../photos/slide_02.png);
 }
 
 .hide {
-	opacity: 0;
+    opacity: 0;
 }
 
 .display-none {
-	display: none;
+    display: none;
 }
