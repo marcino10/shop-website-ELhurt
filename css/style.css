@@ -199,4 +199,30 @@ body {
   width: 20vw;
 }
 
+.bottom-main {
+  background-image: url(../photos/whyUsBanner.png);
+  background-size: cover;
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  align-items: center;
+}
+
+.bottom-main-square {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  background-color: tomato;
+  margin-top: 20%;
+  text-transform: uppercase;
+}
+
+.text-in-button {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
 /*# sourceMappingURL=style.css.map */
