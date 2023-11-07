@@ -7,6 +7,8 @@
 
 body {
 	font-family: sans-serif;
+	width: 100%;
+	min-height: 100vh;
 }
 
 header {
@@ -28,9 +30,9 @@ button:hover {
 }
 
 .main-slider {
-    position: relative;
-    width: 100%;
-    height: 400px;
+	position: relative;
+	width: 100%;
+	height: 400px;
 }
 
 .top-nav {
@@ -66,7 +68,7 @@ button:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 100vw;
+	width: 100%;
 	padding: 20px;
 	background-color: $additional-bgc;
 }
@@ -96,78 +98,99 @@ button:hover {
 }
 
 .bottom-main {
-    position: relative;
-    background-image: url(../photos/whyUsBanner.png);
-    background-size: cover;
-    height: 500px;
-    width: 100vw;
-    color: $main-white;
-    .main-btn {
-        position: absolute;
-        z-index: 10;
-        left: 50%;
-        translate: -50%;
-        top: 75%;
-    }
-    h1 {
-        position: absolute;
-        font-size: 44px;
-        left: 50%;
-        translate: -50%;
-        bottom: 85%;
-    }
-    p {
-        position: absolute;
-        font-size: 18px;
-        text-align: center;
-        left: 50%;
-        translate: -50%;
-        top: 25%;
-        width: 800px;
-    }
+	position: relative;
+	background-image: url(../photos/whyUsBanner.png);
+	background-size: cover;
+	height: 500px;
+	width: 100%;
+	color: $main-white;
+	text-align: center;
+
+	.main-btn {
+		position: absolute;
+		z-index: 10;
+		left: 50%;
+		bottom: 10%;
+		translate: -50%;
+	}
+
+	h1 {
+		position: absolute;
+		font-size: 44px;
+		left: 50%;
+		translate: -50%;
+		bottom: 85%;
+	}
+
+	p {
+		position: absolute;
+		font-size: 18px;
+		left: 50%;
+		translate: -50%;
+		top: 25%;
+		width: 800px;
+	}
 }
 
-.squares {
-    display: flex;
-    position: absolute;
-    height: 150px;
-    width: 200px;
-    border: 2px solid gray;
-    flex-direction: row;
-    left: 50%;
-    translate: -50%;
-    top: 40%;
+.wrapper-squares {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	translate: -50%;
+}
+
+.square {
+	width: 20%;
+	border: 2px solid gray;
+	background-color: transparent;
+	padding: 5rem 0;
+	text-align: center;
+
+	i {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
 }
 
 .main-btn {
-    width: 246px;
-    height: 55px;
-    background-color: $additional-element-color;
-    text-transform: uppercase;
-    border: none;
-    padding: 1rem 1.5rem;
-    color: $main-white;
+	background-color: $additional-element-color;
+	text-transform: uppercase;
+	border: none;
+	padding: 1.5rem 3rem;
+	color: $main-white;
 }
+
 .text-in-btn {
-    position: absolute;
-    top: 36%;
-    left: 17%;
-    color: $main-white;
-    font-weight: bold;
-    font-size: 14px;
+	position: absolute;
+	top: 36%;
+	left: 17%;
+	color: $main-white;
+	font-weight: bold;
+	font-size: 14px;
 }
 .header-in-main-btn {
-    position: absolute;
-    font-size: 44px;
-    bottom: 15%;
-    text-align: center;
+	position: absolute;
+	font-size: 44px;
+	bottom: 15%;
+	text-align: center;
 }
 .bottom-main-rectangle {
-    position: absolute;
-    background: linear-gradient(90deg, lightgray 0 45%, red 45% 55%, lightgray 55% 100%);
-    height: 2px;
-    width: 100vw;
-    top: 20%;
+	position: absolute;
+	background: linear-gradient(90deg, lightgray 0 45%, red 45% 55%, lightgray 55% 100%);
+	height: 2px;
+	width: 100%;
+	top: 20%;
 }
 
 .slider-btn {
@@ -205,11 +228,18 @@ button:hover {
 	background: (90deg, black, grey 50%, white);
 }
 
-.darken-bg {
+.fade-darken-bg {
 	width: 100%;
 	height: 100%;
 	background: linear-gradient(90deg, black, transparent);
-	opacity: 75%;
+	opacity: 65%;
+}
+
+.full-darken-bg {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 70%;
 }
 
 .first-slide {
@@ -223,11 +253,11 @@ button:hover {
 }
 
 .hide {
-    opacity: 0;
+	opacity: 0;
 }
 
 .display-none {
-    display: none;
+	display: none;
 }
 
 .main-btn-slider {
