@@ -5,107 +5,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/d33e2ed676.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
-    <body>
-        <header></header>
-        <nav class="top-nav">
-            <p class="bold-text"><a href="" class="top-nav-element">ŹRÓDŁA ŚWIATŁA</a></p>
-            <p class="bold-text"><a href="" class="top-nav-element">OŚWIETLENIE WEWNĘTRZNE</a></p>
-            <p class="bold-text"><a href="" class="top-nav-element">GNIAZDKA,WYŁĄCZNIKI</a></p>
-            <p class="bold-text"><a href="" class="top-nav-element">AUTOMATYKA,STEROWANIE</a></p>
-            <p class="bold-text"><a href="" class="top-nav-element">ROZDZIELNIE I APARATURA</a></p>
-            <p class="bold-text"><a href="" class="top-nav-element">MATERIAŁY INSTALACYJNE</a></p>
-        </nav>
+<body>
+    <header></header>
+    <nav class="top-nav">
+        <p class="bold-text"><a href="" class="top-nav-element">ŹRÓDŁA ŚWIATŁA</a></p>
+        <p class="bold-text"><a href="" class="top-nav-element">OŚWIETLENIE WEWNĘTRZNE</a></p>
+        <p class="bold-text"><a href="" class="top-nav-element">GNIAZDKA,WYŁĄCZNIKI</a></p>
+        <p class="bold-text"><a href="" class="top-nav-element">AUTOMATYKA,STEROWANIE</a></p>
+        <p class="bold-text"><a href="" class="top-nav-element">ROZDZIELNIE I APARATURA</a></p>
+        <p class="bold-text"><a href="" class="top-nav-element">MATERIAŁY INSTALACYJNE</a></p>
+    </nav>
     <main>
         <div class="main-slider">
-            <button class="slider-btn slider-left-btn">left</button>
             <div class="main-slide first-slide">
-                <div class="main-slide-text">
-                    <h1>Philips HUE</h1>
+                <div class="slide-content-wrapper">
+                    <h1 class="bold-text">Philips HUE</h1>
                     <h2>Oswietl swoj dom</h2>
-                    <p>wyobraz sobie, ze jednym dotknieciem wylaczasz wzystie swiatla.</p>
+                    <p>Wyobraz sobie, ze jednym dotknieciem wylaczasz wzystie swiatla.</p>
                 </div>
             </div>
             <div class="main-slide second-slide hide">
-                <div class="main-slide-text display-none">
-                    <h1>Lorem, ipsum.</h1>
-                    <h2>Lorem, ipsum dolor.</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, quidem.</p>
+                <div class="slide-content-wrapper display-none">
+                    <h1>Poznaj SEDNA</h1>
+                    <h2>Schneider Electric</h2>
+                    <p>Sedna to osprzęt elektroinstalacyjny o wyrazistym kształcie oraz unikalnej formie.</p>
                 </div>
             </div>
-            <button class="btn-more">ZOBACZ WIECEJ</button>
-            <button class="slider-btn slider-right-btn">right</button>
+            <button class="main-btn main-btn-slider bold-text">ZOBACZ WIECEJ</button>
+            <button class="slider-btn slider-left-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-right-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
-        <div class="bottom-main">
-                <button class="bottom-main-button">
+        <!-- <div class="bottom-main">
+                <button class="main-btn">
                     <p class="text-in-button">Informacje o firmie</p>
                 </button>
-        </div>
+        </div> -->
     </main>
-        <nav class="bottom-nav">
-            <div class="bottom-nav-column-wrapper">
-                <h1 class="bottom-nav-header">Informacje</h1>
-                <br />
-                <div class="rectangle"></div>
-                <br />
-                <ul class="bottom-nav-list">
-                    <li>Informacje o sklepie</li>
-                    <li>Porady</li>
-                    <li>Blog</li>
-                    <li>Galeria inspiracji</li>
-                    <li>Kontakt</li>
-                    <li>Informacje o sklepie</li>
-                </ul>
-            </div>
-            <div class="bottom-nav-column-wrapper">
-                <h1 class="bottom-nav-header">Informacje</h1>
-                <br />
-                <div class="rectangle"></div>
-                <br />
-                <ul class="bottom-nav-list">
-                    <li>Czas realizacji</li>
-                    <li>Koszty przesyłki</li>
-                    <li>Zamów próbkę</li>
-                    <li>Szycie na wymiar</li>
-                    <li>Czas realizacji</li>
-                    <li>Koszty przesyłki</li>
-                </ul>
-            </div>
-            <div class="bottom-nav-column-wrapper">
-                <h1 class="bottom-nav-header">Moje konto</h1>
-                <br />
-                <div class="rectangle"></div>
-                <br />
-                <ul class="bottom-nav-list">
-                    <li>Logowanie</li>
-                    <li>Rejestracja</li>
-                    <li>Zamówienia</li>
-                    <li>Ustawienia konta</li>
-                    <li>Zmiana hasła</li>
-                    <li>Schowek</li>
-                </ul>
-            </div>
-            <div class="bottom-nav-column-wrapper">
-                <h1 class="bottom-nav-header">Informacje</h1>
-                <br />
-                <div class="rectangle"></div>
-                <br />
-                <ul class="bottom-nav-list">
-                    <li>Informacje o sklepie</li>
-                    <li>Porady</li>
-                    <li>Blog</li>
-                    <li>Galeria inspiracji</li>
-                    <li>Kontakt</li>
-                    <li>Informacje o sklepie</li>
-                </ul>
-            </div>
-        </nav>
-        <footer class="footer">
-            <p>Copyright 2022. Wszystkie prawa zastrzeżone</p>
-            <p>Agencja interaktywna [ti] Powered by 2ClickShop</p>
-        </footer>
-        <script src="js/main.js"></script>
-    </body>
+    <nav class="bottom-nav">
+        <div class="bottom-nav-column-wrapper">
+            <h1 class="bottom-nav-header">Informacje</h1>
+            <br />
+            <div class="rectangle"></div>
+            <br />
+            <ul class="bottom-nav-list">
+                <li>Informacje o sklepie</li>
+                <li>Porady</li>
+                <li>Blog</li>
+                <li>Galeria inspiracji</li>
+                <li>Kontakt</li>
+                <li>Informacje o sklepie</li>
+            </ul>
+        </div>
+        <div class="bottom-nav-column-wrapper">
+            <h1 class="bottom-nav-header">Informacje</h1>
+            <br />
+            <div class="rectangle"></div>
+            <br />
+            <ul class="bottom-nav-list">
+                <li>Czas realizacji</li>
+                <li>Koszty przesyłki</li>
+                <li>Zamów próbkę</li>
+                <li>Szycie na wymiar</li>
+                <li>Czas realizacji</li>
+                <li>Koszty przesyłki</li>
+            </ul>
+        </div>
+        <div class="bottom-nav-column-wrapper">
+            <h1 class="bottom-nav-header">Moje konto</h1>
+            <br />
+            <div class="rectangle"></div>
+            <br />
+            <ul class="bottom-nav-list">
+                <li>Logowanie</li>
+                <li>Rejestracja</li>
+                <li>Zamówienia</li>
+                <li>Ustawienia konta</li>
+                <li>Zmiana hasła</li>
+                <li>Schowek</li>
+            </ul>
+        </div>
+        <div class="bottom-nav-column-wrapper">
+            <h1 class="bottom-nav-header">Informacje</h1>
+            <br />
+            <div class="rectangle"></div>
+            <br />
+            <ul class="bottom-nav-list">
+                <li>Informacje o sklepie</li>
+                <li>Porady</li>
+                <li>Blog</li>
+                <li>Galeria inspiracji</li>
+                <li>Kontakt</li>
+                <li>Informacje o sklepie</li>
+            </ul>
+        </div>
+    </nav>
+    <footer class="footer">
+        <p>Copyright 2022. Wszystkie prawa zastrzeżone</p>
+        <p>Agencja interaktywna [ti] Powered by 2ClickShop</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
