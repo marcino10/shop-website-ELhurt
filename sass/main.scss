@@ -36,6 +36,7 @@ header {
 .header-logo {
 	width: 50%;
 }
+
 .header-elements {
 	width: 50%;
 	display: flex;
@@ -63,6 +64,7 @@ header {
 		font-size: 1.7em;
 	}
 }
+
 .shopping-cart {
 	border: 1px solid $additional-bgc;
 
@@ -77,7 +79,6 @@ header {
 	}
 
 	p {
-        
 		padding-left: 0;
 	}
 }
