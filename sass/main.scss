@@ -1,8 +1,8 @@
-@use "reset";
-@use "colors" as *;
+@use 'reset';
+@use 'colors' as *;
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -12,21 +12,74 @@ body {
 }
 
 header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 html {
-    font-size: 10px;
+	font-size: 10px;
 }
 
 body {
-    font-family: sans-serif;
+	font-family: sans-serif;
 }
 
 button:hover {
-    cursor: pointer;
+	cursor: pointer;
+}
+
+header {
+	padding: 10px;
+}
+
+.header-logo {
+	width: 50%;
+}
+.header-elements {
+	width: 50%;
+	display: flex;
+	color: $main-font-color;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	gap: 35px;
+	align-items: center;
+	justify-content: flex-end;
+
+	a:visited {
+		color: $main-font-color;
+	}
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		text-decoration: none;
+	}
+
+	i {
+		font-size: 1.7em;
+	}
+}
+.shopping-cart {
+	border: 1px solid $additional-bgc;
+
+	i {
+		border-right: 1px solid $additional-bgc;
+	}
+
+	i,
+	p {
+		padding: 10px;
+		text-align: center;
+	}
+
+	p {
+        
+		padding-left: 0;
+	}
 }
 
 .main-slider {
@@ -36,32 +89,32 @@ button:hover {
 }
 
 .top-nav {
-    width: 100%;
-    height: 50px;
-    border: 1px solid $additional-bgc;
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    align-items: center;
-    justify-content: space-evenly;
+	width: 100%;
+	height: 50px;
+	border: 1px solid $additional-bgc;
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .bold-text {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .top-nav-element {
-    color: $main-font-color;
-    text-decoration: none;
+	color: $main-font-color;
+	text-decoration: none;
 }
 
 .footer {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
-    padding: 15px;
-    border: 1px solid $additional-bgc;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: space-between;
+	padding: 15px;
+	border: 1px solid $additional-bgc;
 }
 
 .bottom-nav {
@@ -74,27 +127,27 @@ button:hover {
 }
 
 .bottom-nav-header {
-    font-size: 1rem;
-    color: $main-white;
-    text-transform: uppercase;
+	font-size: 1rem;
+	color: $main-white;
+	text-transform: uppercase;
 }
 
 .bottom-nav-list {
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-    color: $nav-font-color;
-    gap: 10px;
+	display: flex;
+	flex-direction: column;
+	font-size: 1rem;
+	color: $nav-font-color;
+	gap: 10px;
 }
 
 .bottom-nav-column-wrapper {
-    width: 25%;
+	width: 25%;
 }
 
 .rectangle {
-    background: linear-gradient(90deg, red 0 10%, gray 10% 90%);
-    height: 2px;
-    width: 85%;
+	background: linear-gradient(90deg, red 0 10%, gray 10% 90%);
+	height: 2px;
+	width: 85%;
 }
 //  botommmmmmmmmm mainnnnnnnn pinys
 .bottom-main {
@@ -194,38 +247,38 @@ button:hover {
 }
 
 .slider-btn {
-    position: absolute;
-    top: 50%;
-    translate: 0 -50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: $arrow-btn-color;
-    padding: 1rem 1.5rem;
-    opacity: 60%;
+	position: absolute;
+	top: 50%;
+	translate: 0 -50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background-color: $arrow-btn-color;
+	padding: 1rem 1.5rem;
+	opacity: 60%;
 }
 
 .slider-left-btn {
-    left: 0;
+	left: 0;
 }
 
 .slider-right-btn {
-    right: 0;
+	right: 0;
 }
 
 .main-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: opacity 0.5s;
-    background: (90deg, black, grey 50%, white);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: opacity 0.5s;
+	background: (90deg, black, grey 50%, white);
 }
 
 .fade-darken-bg {
@@ -243,13 +296,13 @@ button:hover {
 }
 
 .first-slide {
-    background-image: url(../photos/slide_02.png);
-    background-position: center;
+	background-image: url(../photos/slide_02.png);
+	background-position: center;
 }
 
 .second-slide {
-    background-image: url(../photos/slide_01.jpg);
-    background-position: left;
+	background-image: url(../photos/slide_01.jpg);
+	background-position: left;
 }
 
 .hide {
@@ -261,85 +314,85 @@ button:hover {
 }
 
 .main-btn-slider {
-    position: absolute;
-    top: 67%;
-    left: 75px;
-    color: $main-white;
-    font-size: 1.4rem;
+	position: absolute;
+	top: 67%;
+	left: 75px;
+	color: $main-white;
+	font-size: 1.4rem;
 }
 
 .slide-content-wrapper {
-    position: absolute;
-    top: 25%;
-    left: 75px;
-    width: 300px;
-    color: $main-white;
+	position: absolute;
+	top: 25%;
+	left: 75px;
+	width: 300px;
+	color: $main-white;
 
-    p {
-        line-height: 1.3em;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        font-size: 18px;
-    }
+	p {
+		line-height: 1.3em;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
 
-    h1,
-    h2 {
-        font-size: 36px;
-    }
+	h1,
+	h2 {
+		font-size: 36px;
+	}
 }
 
 .see-more-section {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 .see-more-element {
-    width: 30%;
-    height: 264px;
-    background-position: center;
-    background-size: cover;
+	width: 30%;
+	height: 264px;
+	background-position: center;
+	background-size: cover;
 
-    h1,
-    h2,
-    .main-btn {
-        margin-left: 20px;
-    }
+	h1,
+	h2,
+	.main-btn {
+		margin-left: 20px;
+	}
 
-    h1 {
-        margin-top: 20%;
-        margin-left: 20px;
-        font-size: 30px;
-        font-weight: bold;
-        color: $main-white;
-        line-height: 1.5em;
-    }
-    h2 {
-        font-size: 30px;
-        color: $main-white;
-    }
+	h1 {
+		margin-top: 20%;
+		margin-left: 20px;
+		font-size: 30px;
+		font-weight: bold;
+		color: $main-white;
+		line-height: 1.5em;
+	}
+	h2 {
+		font-size: 30px;
+		color: $main-white;
+	}
 
-    .main-btn {
-        margin-top: 15px;
-        padding: 1.5rem 2.5rem;
-        border: 1px solid $main-white;
-        background-color: transparent;
-        transition: background-color 0.2s, border 0.2s;
-    }
-    .main-btn:hover {
-        background-color: $additional-element-color;
-        border: none;
-    }
+	.main-btn {
+		margin-top: 15px;
+		padding: 1.5rem 2.5rem;
+		border: 1px solid $main-white;
+		background-color: transparent;
+		transition: background-color 0.2s, border 0.2s;
+	}
+	.main-btn:hover {
+		background-color: $additional-element-color;
+		border: none;
+	}
 }
 
 .element1 {
-    background-image: url(../photos/img_02.jpg);
+	background-image: url(../photos/img_02.jpg);
 }
 
 .element2 {
-    background-image: url(../photos/img_03.jpg);
+	background-image: url(../photos/img_03.jpg);
 }
 
 .element3 {
-    background-image: url(../photos/img_04.jpg);
+	background-image: url(../photos/img_04.jpg);
 }
