@@ -1,5 +1,5 @@
-const mainSliderBtns = document.querySelectorAll('.main-slider-btn');
-const mainSlides = document.querySelectorAll('.main-slide');
+const mainSliderBtns = document.querySelectorAll('.main-slider .slider-btn');
+const mainSlidesImages = document.querySelectorAll('.main-slider img');
 const mainSlidesText = document.querySelectorAll('.slide-content-wrapper');
 
 const productSliderBtns = document.querySelectorAll('.product-slider-btn');
@@ -8,13 +8,11 @@ let currentStack = 0;
 const numOfStacks = productStacks.length;
 
 const changeMainSlider = () => {
-	mainSlides.forEach(slide => slide.classList.toggle('hide'));
+	mainSlidesImages.forEach(slide => slide.classList.toggle('hide'));
 	mainSlidesText.forEach(text => text.classList.toggle('display-none'));
 };
 
 const rightChangeProductSlider = () => {
-	console.log('right');
-	console.log(currentStack);
 	if (currentStack < numOfStacks - 1) {
 		productStacks.forEach(stack => (stack.style.translate = `${(currentStack + 1) * -100}%`));
 		currentStack++;
@@ -42,8 +40,6 @@ const changeProductSlider = e => {
 		rightChangeProductSlider();
 	}
 };
-
-console.log(numOfStacks);
 
 mainSliderBtns.forEach(btn => btn.addEventListener('click', changeMainSlider));
 productSliderBtns.forEach(btn => btn.addEventListener('click', changeProductSlider));
