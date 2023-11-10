@@ -67,8 +67,8 @@ button:hover {
 }
 
 .full-darken-bg {
-	background-color: black;
-	opacity: 60%;
+	background-color: rgb(37, 37, 37);
+	opacity: 50%;
 }
 
 .middle-red-line {
@@ -428,8 +428,10 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	gap: 2rem;
 	width: 100%;
-	padding: 20px;
+	padding: 2rem 2rem 3rem;
+	font-size: 1.5rem;
 	background-color: $additional-bgc;
 
 	h1 {
@@ -443,18 +445,20 @@ header {
 	width: 25%;
 }
 
+.bottom-nav-line {
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, rgb(247, 64, 54) 0 8%, rgb(96, 101, 102) 8% 90%);
+	margin-bottom: 2rem;
+	color: rgb(96, 101, 102)
+}
+
 .bottom-nav-list {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 2rem;
 	font-size: 1rem;
 	color: $nav-font-color;
-}
-
-.bottom-nav-line {
-	width: 85%;
-	height: 2px;
-	background: linear-gradient(90deg, red 0 10%, gray 10% 90%);
 }
 
 footer {
