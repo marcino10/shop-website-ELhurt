@@ -27,7 +27,6 @@ const leftChangeProductSlider = () => {
 		productStacks.forEach(stack => (stack.style.translate = `${(numOfStacks - 1) * -100}%`));
 		currentStack = numOfStacks - 1;
 	} else {
-		console.log('here');
 		productStacks.forEach(stack => (stack.style.translate = `${(currentStack - 1) * -100}%`));
 		currentStack--;
 	}
