@@ -1,5 +1,5 @@
 @use 'reset';
-@use 'variable' as v;
+@use 'variables' as v;
 
 html {
 	font-size: 10px;
@@ -147,20 +147,20 @@ main {
 		transition: scale 0.25s linear;
 	}
 
-	h1,
 	h2,
+	h3,
 	button {
 		z-index: 1;
 		margin-left: 4rem;
 	}
 
-	h1,
-	h2 {
+	h2,
+	h3 {
 		line-height: 1.2em;
 		font-size: 30px;
 	}
 
-	h1 {
+	h2 {
 		font-weight: bold;
 	}
 
@@ -197,7 +197,7 @@ main {
 	background-size: cover;
 	background-position: top;
 
-	h1 {
+	h2 {
 		font-size: 44px;
 	}
 
@@ -339,11 +339,11 @@ main {
 		background-color: transparent;
 		color: v.$main-white;
 
-		h1,
-		h2 {
+		h2,
+		h3 {
 			font-size: 2em;
 		}
-		h1 {
+		h2 {
 			margin-bottom: 0.1em;
 		}
 
@@ -385,20 +385,20 @@ main {
 			transition: scale 0.25s linear;
 		}
 
-		h1,
 		h2,
+		h3,
 		button {
 			z-index: 1;
 			margin-left: 4rem;
 		}
 
-		h1,
-		h2 {
+		h2,
+		h3 {
 			line-height: 1.2em;
 			font-size: 30px;
 		}
 
-		h1 {
+		h2 {
 			font-weight: bold;
 		}
 
@@ -425,7 +425,7 @@ main {
 		padding: 2rem 0;
 		text-align: center;
 
-		h1 {
+		h2 {
 			padding-bottom: 2rem;
 			font-size: 34px;
 		}
@@ -477,7 +477,7 @@ main {
 			padding: 4rem 0;
 		}
 
-		h2 {
+		h3 {
 			font-size: larger;
 			font-weight: bold;
 			text-transform: uppercase;
@@ -572,7 +572,7 @@ main {
 		background-size: cover;
 		background-position: top;
 
-		h1 {
+		h2 {
 			font-size: 44px;
 		}
 
@@ -615,7 +615,7 @@ main {
 			font-size: 3.5rem;
 		}
 
-		h2 {
+		h3 {
 			font-size: 1.5rem;
 			text-transform: uppercase;
 		}
@@ -631,7 +631,7 @@ main {
 		font-size: 1.5rem;
 		background-color: v.$additional-bgc;
 
-		h1 {
+		h2 {
 			font-size: 1rem;
 			color: v.$main-white;
 			text-transform: uppercase;
@@ -660,10 +660,17 @@ main {
 
 	footer {
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		flex-direction: column;
 		padding: 1.3rem 2rem;
 		text-align: center;
+		padding: 10px;
+	}
+
+	.footer-copyright{
+		display: flex;
+		justify-content: space-between;
+		padding: 10px;
+		border: 1px solid v.$main-font-color;
 	}
 
 	.hide {
