@@ -1,5 +1,5 @@
 @use 'reset';
-@use 'colors' as *;
+@use 'variable' as v;
 
 html {
 	font-size: 10px;
@@ -16,7 +16,7 @@ a {
 }
 
 a:visited {
-	color: $main-font-color;
+	color: v.$main-font-color;
 }
 
 button:hover {
@@ -32,8 +32,8 @@ button:hover {
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: $main-white;
-	background-color: $additional-element-color;
+	color: v.$main-white;
+	background-color: v.$additional-element-color;
 }
 
 .slider-btn {
@@ -44,7 +44,7 @@ button:hover {
 	top: 40%;
 	z-index: 100;
 	padding: 1.4rem 1.7rem;
-	background-color: $arrow-btn-color;
+	background-color: v.$arrow-btn-color;
 
 	i {
 		font-size: 1.7rem;
@@ -134,7 +134,7 @@ main {
 	width: 100%;
 	height: 40vh;
 	min-height: 300px;
-	color: $main-white;
+	color: v.$main-white;
 	overflow: hidden;
 
 	img {
@@ -166,13 +166,13 @@ main {
 
 	.main-btn {
 		margin-top: 20px;
-		border: 1px solid $main-white;
+		border: 1px solid v.$main-white;
 		background-color: transparent;
 		transition: background-color 0.2s linear;
 	}
 
 	.main-btn:hover {
-		background-color: $additional-element-color;
+		background-color: v.$additional-element-color;
 		border: none;
 	}
 }
@@ -192,7 +192,7 @@ main {
 	width: 100%;
 	padding: 5rem 0;
 	text-align: center;
-	color: $main-white;
+	color: v.$main-white;
 	background-image: url(../photos/whyUsBanner.png);
 	background-size: cover;
 	background-position: top;
@@ -252,7 +252,7 @@ main {
 		width: 70%;
 		font-size: 1.3rem;
 		font-weight: bold;
-		color: $main-font-color;
+		color: v.$main-font-color;
 		text-transform: uppercase;
 
 		a {
@@ -268,10 +268,10 @@ main {
 	}
 
 	.shopping-cart {
-		border: 1px solid $additional-bgc;
+		border: 1px solid v.$additional-bgc;
 
 		i {
-			border-right: 1px solid $additional-bgc;
+			border-right: 1px solid v.$additional-bgc;
 		}
 
 		i,
@@ -291,19 +291,19 @@ main {
 		justify-content: space-between;
 		width: 100%;
 		padding: 1.5rem 2.4rem;
-		border-top: $top-nav-border;
-		border-bottom: $top-nav-border;
+		border-top: v.$top-nav-border;
+		border-bottom: v.$top-nav-border;
 	}
 
 	.top-nav-element {
-		color: $main-font-color;
+		color: v.$main-font-color;
 		text-decoration: none;
 		font-size: 1.1rem;
 	}
 
 	.main-padding {
 		padding: 2rem;
-		background-color: $main-section-bgc;
+		background-color: v.$main-section-bgc;
 	}
 
 	.main-slider {
@@ -337,7 +337,7 @@ main {
 		padding-left: 8%;
 		font-size: 22px;
 		background-color: transparent;
-		color: $main-white;
+		color: v.$main-white;
 
 		h1,
 		h2 {
@@ -372,7 +372,7 @@ main {
 		width: 100%;
 		height: 40vh;
 		min-height: 300px;
-		color: $main-white;
+		color: v.$main-white;
 		overflow: hidden;
 
 		img {
@@ -404,13 +404,13 @@ main {
 
 		.main-btn {
 			margin-top: 20px;
-			border: 1px solid $main-white;
+			border: 1px solid v.$main-white;
 			background-color: transparent;
 			transition: background-color 0.2s linear;
 		}
 
 		.main-btn:hover {
-			background-color: $additional-element-color;
+			background-color: v.$additional-element-color;
 			border: none;
 		}
 	}
@@ -446,7 +446,7 @@ main {
 		padding: 3rem 0;
 
 		.slider-btn {
-			color: $main-white;
+			color: v.$main-white;
 		}
 	}
 
@@ -458,7 +458,7 @@ main {
 		gap: 1rem;
 		width: 100%;
 		min-width: 100%;
-		background-color: $main-section-bgc;
+		background-color: v.$main-section-bgc;
 		transition: translate 0.5s linear;
 	}
 
@@ -467,8 +467,8 @@ main {
 		height: auto;
 		padding: 0 2rem 3rem;
 		font-size: 1rem;
-		color: $main-font-color;
-		background-color: $main-white;
+		color: v.$main-font-color;
+		background-color: v.$main-white;
 
 		img {
 			width: 100%;
@@ -511,7 +511,7 @@ main {
 	}
 
 	.old-price {
-		color: $old-price-font-color;
+		color: v.$old-price-font-color;
 		text-decoration: line-through;
 	}
 
@@ -554,8 +554,8 @@ main {
 		height: 100%;
 		padding: 0 1.5rem;
 		font-size: 20px;
-		color: $main-white;
-		background-color: $buy-btn-color;
+		color: v.$main-white;
+		background-color: v.$buy-btn-color;
 	}
 
 	.bottom-main {
@@ -567,7 +567,7 @@ main {
 		width: 100%;
 		padding: 5rem 0;
 		text-align: center;
-		color: $main-white;
+		color: v.$main-white;
 		background-image: url(../photos/whyUsBanner.png);
 		background-size: cover;
 		background-position: top;
@@ -629,11 +629,11 @@ main {
 		width: 100%;
 		padding: 2rem 2rem 3rem;
 		font-size: 1.5rem;
-		background-color: $additional-bgc;
+		background-color: v.$additional-bgc;
 
 		h1 {
 			font-size: 1rem;
-			color: $main-white;
+			color: v.$main-white;
 			text-transform: uppercase;
 		}
 	}
@@ -655,7 +655,7 @@ main {
 		flex-direction: column;
 		gap: 2rem;
 		font-size: 1rem;
-		color: $nav-font-color;
+		color: v.$nav-font-color;
 	}
 
 	footer {
