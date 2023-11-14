@@ -11,124 +11,121 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-logo">
-            <h1 class="main-logo"><img src="./photos/logo.png"></h1>
+    <header class="header">
+        <div class="header__logo">
+            <h1>
+                <img src="./photos/logo.png" alt="ELhurt logo">
+            </h1>
         </div>
-        <button class="mobile-menu-btn">
-            <i class="fa-solid fa-bars"></i>
+        <button class="header__mobile-btn">
+            <i class="ti ti-menu-2"></i>
         </button>
-        <div class="header-elements">
-            <a href="javascript:void(0)">
+        <div class="header__nav">
+            <a href="javascript:void(0)" class="nav__element">
                 <img src="./icons/phone.svg" alt="">
                 <p>kontakt</p>
             </a>
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" class="nav__element">
                 <img src="./icons/star.svg" alt="">
                 <p>ulubione</p>
             </a>
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" class="nav__element">
                 <img src="./icons/user.svg" alt="">
                 <p>moje konto</p>
             </a>
-            <a href="javascript:void(0)" class="shopping-cart">
-                <img src="./icons/shopping-cart.svg" alt="">
-                <p>twój koszyk</p>
+            <a href="javascript:void(0)" class="nav__element nav__element--cart">
+                <div class="element__cart">
+                    <div class="cart__num-products"></div>
+                    <img src="./icons/shopping-cart.svg" alt="" class="cart__img">
+                </div>
+                <div class="element__price">
+                    <p>twój koszyk</p>
+                    <p>3456,00 zl</p>
+                </div>
+                <div class="element__arrow">
+                    <img src="./icons/white-arrow.svg" alt="" class="arrow__img">
+                </div>
             </a>
         </div>
     </header>
-    <div class="mobile-header-elements">
-        <a href="">
-            <i class="fa-solid fa-phone"></i>
-            <p>kontakt</p>
+    <nav class="nav">
+        <a href="javascript:void(0)" class="nav__link">
+            <p class="text--bold">ŹRÓDŁA ŚWIATŁA</p>
         </a>
-        <a href="">
-            <i class="fa-solid fa-star"></i>
-            <p>ulubione</p>
+        <a href="javascript:void(0)" class="nav__link">
+            <p class="text--bold">OŚWIETLENIE WEWNĘTRZNE</p>
         </a>
-        <a href="">
-            <i class="fa-solid fa-user"></i>
-            <p>moje konto</p>
+        <a href="javascript:void(0)" class="nav__link">
+            <p class="text--bold">GNIAZDKA, WYŁĄCZNIKI</p>
         </a>
-        <a href="" class="shopping-cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <p>twój koszyk</p>
+        <a href="javascript:void(0)" class="nav__link">
+            <p class="text--bold">AUTOMATYKA, STEROWANIE</p>
         </a>
-    </div>
-    <nav class="top-nav">
-        <a href="javascript:void(0)" class="top-nav-element">
-            <p class="bold-text">ŹRÓDŁA ŚWIATŁA</p>
+        <a href="javascript:void(0)" class="nav__link">
+            <p class="text--bold">ROZDZIELNIE I APARATURA</p>
         </a>
-        <a href="javascript:void(0)" class="top-nav-element">
-            <p class="bold-text">OŚWIETLENIE WEWNĘTRZNE</p>
-        </a>
-        <a href="javascript:void(0)" class="top-nav-element">
-            <p class="bold-text">GNIAZDKA, WYŁĄCZNIKI</p>
-        </a>
-        <a href="javascript:void(0)" class="top-nav-element">
-            <p class="bold-text">AUTOMATYKA, STEROWANIE</p>
-        </a>
-        <a href="javascript:void(0)" class="top-nav-element">
-            <p class="bold-text">ROZDZIELNIE I APARATURA</p>
-        </a>
-        <a href="javascript:void(0)" class="top-nav-element">
-            <p class="bold-text">MATERIAŁY INSTALACYJNE</p>
+        <a href="javascript:void(0)" class="nav__link">
+            <p class="text--bold">MATERIAŁY INSTALACYJNE</p>
         </a>
     </nav>
-    <main>
-        <div class="main-padding">
-            <div class="main-slider">
+    <main class="main">
+        <div class="main--padding">
+            <div class="main__slider">
                 <div class="fade-darken-bg"></div>
-                <img src="photos/slide_01.jpg" alt="example of SEDNA product">
-                <div class="slide-content-wrapper slide1">
-                    <h2 class="bold-text">Poznaj SEDNA</h2>
-                    <h3>Schneider Electric</h3>
-                    <p>Sedna to osprzęt elektroinstalacyjny o wyrazistym kształcie oraz unikalnej formie.</p>
-                    <button class="main-btn main-btn-slider bold-text">ZOBACZ WIĘCEJ</button>
+                <div class="slider__slide">
+                    <img src="photos/slide_01.jpg" alt="example of SEDNA product" class="slide__img">
+                    <div class="slide__text">
+                        <h2 class="text--bold">Poznaj SEDNA</h2>
+                        <h3>Schneider Electric</h3>
+                        <p>Sedna to osprzęt elektroinstalacyjny o wyrazistym kształcie oraz unikalnej formie.</p>
+                        <button class="btn--main slide__btn text--bold">ZOBACZ WIĘCEJ</button>
+                    </div>
                 </div>
-                <img class="hide" src="photos/slide_02.png" alt="example of HUE product">
-                <div class="slide-content-wrapper display-none">
-                    <h2 class="bold-text">Philips HUE</h2>
-                    <h3>Oświetl swój dom</h3>
-                    <p>Wyobraź sobie, że jednym dotknięciem wyłączasz wszystkie światła.</p>
-                    <button class="main-btn main-btn-slider bold-text">ZOBACZ WIĘCEJ</button>
+                <div class="slider__slide hide" aria-hidden="true">
+                    <img class="slide__img" src="photos/slide_02.png" alt="example of HUE product">
+                    <div class="slide__text">
+                        <h2 class="text--bold">Philips HUE</h2>
+                        <h3>Oświetl swój dom</h3>
+                        <p>Wyobraź sobie, że jednym dotknięciem wyłączasz wszystkie światła.</p>
+                        <button class="btn--main slide__btn text--bold">ZOBACZ WIĘCEJ</button>
+                    </div>
                 </div>
-                <button class="slider-btn slider-left-btn">
-                    <img src="./icons/arrow-left.svg" alt="">
+                <button class="slider__btn btn--left">
+                    <img src="./icons/grey-arrow.svg" alt="">
                 </button>
-                <button class="slider-btn slider-right-btn">
-                    <img src="./icons/arrow-left.svg" alt="">
+                <button class="slider__btn btn--right">
+                    <img src="./icons/grey-arrow.svg" alt="">
                 </button>
             </div>
-            <div class="see-more-section">
-                <div class="see-more-element">
+            <div class="main__see-more">
+                <div class="see-more__element">
                     <img src="photos/img_02.jpg" alt="">
                     <div class="fade-darken-bg"></div>
                     <h2>Pomoc eksperta</h2>
                     <h3>Doradzamy</h3>
-                    <button class="main-btn">Zobacz więcej</button>
+                    <button class="btn--main">Zobacz więcej</button>
                 </div>
-                <div class="see-more-element">
+                <div class="see-more__element">
                     <img src="photos/img_03.jpg" alt="">
                     <div class="fade-darken-bg"></div>
                     <h2>Szukaj wygodnie</h2>
                     <h3>elhurt plus</h3>
-                    <button class="main-btn">Zobacz więcej</button>
+                    <button class="btn--main">Zobacz więcej</button>
                 </div>
-                <div class="see-more-element">
+                <div class="see-more__element">
                     <img src="photos/img_04.jpg" alt="">
                     <div class="fade-darken-bg"></div>
                     <h2>Seria Unica</h2>
                     <h3>wyjątkowy wzór</h3>
-                    <button class="main-btn">Zobacz więcej</button>
+                    <button class="btn--main">Zobacz więcej</button>
                 </div>
             </div>
             <div class="products">
-                <h2 class="bold-text">Polecane produkty</h2>
+                <h2 class="text--bold">Polecane produkty</h2>
                 <div class="middle-red-line"></div>
-                <div class="products-slider">
-                    <button class="slider-btn slider-left-btn product-slider-btn">
-                        <img src="./icons/white-arrow-right.svg" alt="">
+                <div class="products__slider">
+                    <button class="slider__btn btn--left" data-element="product-slider-btn">
+                        <img src="./icons/white-arrow.svg" alt="">
                     </button>
                     <div class="products-stack">
                         <div class="product">
@@ -257,48 +254,46 @@
                             <p class="new-price">442,85 zl</p>
                         </div>
                     </div>
-                    <button class="slider-btn slider-right-btn product-slider-btn">
-                        <img src="./icons/white-arrow-right.svg" alt="">
+                    <button class="slider__btn btn--right" data-element="product-slider-btn">
+                        <img src="./icons/white-arrow.svg" alt="">
                     </button>
                 </div>
-                <button class="main-btn">zobacz wszystkie informacje</button>
+                <button class="btn--main">zobacz wszystkie informacje</button>
             </div>
         </div>
-        <div class="bottom-main">
+        <div class="why-us">
             <div class="full-darken-bg"></div>
             <h2>Sprawdź dlaczego my</h2>
             <div class="middle-red-line"></div>
-            <div class="bottom-main-content-wrapper">
+            <div class="why-us__content">
                 <p>Początki działalności to rok 2002r i otwarcie hurtowni elektrycznej, oferującej podstawowe produkty
                     do
                     instalacji elektrycznych jak i również materiały używane w przemyśle wydobywczym. Firma dostarczała
                     produkty trudno dostępne do kopalń, zakładów przemysłowych.</p>
-                <div class="wrapper-squares bold-text">
-                    <div class="square">
+                <div class="why-us__squares text--bold">
+                    <div class="why-us__square">
                         <i class="ti ti-truck-delivery"></i>
                         <h3>szybka wysyłka</h3>
                     </div>
-                    <div class="square">
+                    <div class="why-us__square">
                         <i class="ti ti-device-ipad-horizontal-search"></i>
                         <h3>szeroki asortyment</h3>
                     </div>
-                    <div class="square">
+                    <div class="why-us__square">
                         <i class="ti ti-rotate"></i>
                         <h3>bezpieczne zwroty</h3>
                     </div>
                 </div>
-                <button class="main-btn">Informacje o firmie</button>
+                <button class="btn--main">Informacje o firmie</button>
             </div>
         </div>
     </main>
-    <footer>
-        <nav class="bottom-nav">
-            <div class="bottom-nav-column-wrapper">
+    <footer class="footer">
+        <nav class="footer__nav">
+            <div class="nav__column">
                 <h2>Informacje</h2>
-                <br />
                 <div class="bottom-nav-line"></div>
-                <br />
-                <ul class="bottom-nav-list">
+                <ul class="column__list">
                     <li>Informacje o sklepie</li>
                     <li>Porady</li>
                     <li>Blog</li>
@@ -307,12 +302,10 @@
                     <li>Informacje o sklepie</li>
                 </ul>
             </div>
-            <div class="bottom-nav-column-wrapper">
+            <div class="nav__column">
                 <h2>Informacje</h2>
-                <br />
                 <div class="bottom-nav-line"></div>
-                <br />
-                <ul class="bottom-nav-list">
+                <ul class="column__list">
                     <li>Czas realizacji</li>
                     <li>Koszty przesyłki</li>
                     <li>Zamów próbkę</li>
@@ -321,12 +314,10 @@
                     <li>Koszty przesyłki</li>
                 </ul>
             </div>
-            <div class="bottom-nav-column-wrapper">
+            <div class="nav__column">
                 <h2>Moje konto</h2>
-                <br />
                 <div class="bottom-nav-line"></div>
-                <br />
-                <ul class="bottom-nav-list">
+                <ul class="column__list">
                     <li>Logowanie</li>
                     <li>Rejestracja</li>
                     <li>Zamówienia</li>
@@ -335,12 +326,10 @@
                     <li>Schowek</li>
                 </ul>
             </div>
-            <div class="bottom-nav-column-wrapper">
+            <div class="nav__column">
                 <h2>Informacje</h2>
-                <br />
                 <div class="bottom-nav-line"></div>
-                <br />
-                <ul class="bottom-nav-list">
+                <ul class="column__list">
                     <li>Informacje o sklepie</li>
                     <li>Porady</li>
                     <li>Blog</li>
@@ -350,7 +339,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="footer-copyright">
+        <div class="footer__copyright">
             <p>Copyright 2023. Wszystkie prawa zastrzeżone</p>
             <p>trol praktyki</p>
         </div>

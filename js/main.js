@@ -1,10 +1,9 @@
-const mobileMenu = document.querySelector('.mobile-header-elements');
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenu = document.querySelector('.header__nav');
+const mobileMenuBtn = document.querySelector('.header__mobile-btn');
 let isMobileMenuShow = false;
 
-const mainSliderBtns = document.querySelectorAll('.main-slider .slider-btn');
-const mainSlidesImages = document.querySelectorAll('.main-slider img');
-const mainSlidesText = document.querySelectorAll('.slide-content-wrapper');
+const mainSlider = document.querySelector('.main__slider');
+const mainSliderSlides = document.querySelectorAll('.slider__slide');
 
 const productSliderBtns = document.querySelectorAll('.product-slider-btn');
 const productStacks = document.querySelectorAll('.products-stack');
@@ -22,15 +21,21 @@ const changeVisibilityMobileMenu = () => {
 		mobileMenuBtn.style.transform = `translateX(-${widthOfMenu}px)`;
 	}
 
-	mobileMenuBtn.firstElementChild.classList.toggle('fa-bars');
-	mobileMenuBtn.firstElementChild.classList.toggle('fa-xmark');
+	mobileMenuBtn.firstElementChild.classList.toggle('ti-menu-2');
+	mobileMenuBtn.firstElementChild.classList.toggle('ti-x');
 
 	isMobileMenuShow = !isMobileMenuShow;
 };
 
 const changeMainSlider = () => {
-	mainSlidesImages.forEach(slide => slide.classList.toggle('hide'));
-	mainSlidesText.forEach(text => text.classList.toggle('display-none'));
+	mainSliderSlides.forEach(slide => {
+		slide.classList.toggle('hide');
+		if (slide.getAttribute('aria-hidden') === 'true') {
+			slide.removeAttribute('aria-hidden');
+		} else {
+			slide.setAttribute('aria-hidden', 'true');
+		}
+	});
 };
 
 const rightChangeProductSlider = () => {
@@ -62,5 +67,7 @@ const changeProductSlider = e => {
 };
 
 mobileMenuBtn.addEventListener('click', changeVisibilityMobileMenu);
-mainSliderBtns.forEach(btn => btn.addEventListener('click', changeMainSlider));
+
+mainSlider.addEventListener('click', changeMainSlider);
+
 productSliderBtns.forEach(btn => btn.addEventListener('click', changeProductSlider));
