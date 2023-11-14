@@ -7,7 +7,7 @@ html {
 
 body {
 	font-family: sans-serif;
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
 }
 
@@ -110,7 +110,7 @@ header {
 	height: 6vh;
 	max-height: 100px;
 	padding: 1rem 1rem;
-	background-color: $main-white;
+	background-color: v.$main-white;
 }
 
 .header-logo {
@@ -130,7 +130,6 @@ header {
 	font-size: calc(6vh - 2rem);
 }
 
-
 .mobile-header-elements {
 	position: fixed;
 	top: 0;
@@ -145,8 +144,8 @@ header {
 	font-size: 1.5rem;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: $main-font-color;
-	background-color: $mobile-menu-bgc;
+	color: v.$main-font-color;
+	background-color: v.$mobile-menu-bgc;
 	transform: translateX(100%);
 
 	a {
@@ -158,11 +157,11 @@ header {
 	a:not(:first-of-type) {
 		margin-top: 10px;
 	}
-	
+
 	p {
 		text-align: left;
 	}
-	
+
 	i {
 		display: flex;
 		justify-content: center;
@@ -176,7 +175,7 @@ header {
 .header-elements {
 	display: none;
 }
-// krecimy gwenosa
+
 main {
 	width: 100%;
 }
@@ -267,7 +266,6 @@ main {
 	p {
 		font-size: 18px;
 		padding-bottom: 45px;
-		// margin: -30px;
 	}
 
 	*:not(.full-darken-bg) {
@@ -305,14 +303,14 @@ main {
 		width: 30%;
 		font-size: 1.3rem;
 		font-weight: bold;
-		color: $main-font-color;
+		color: v.$main-font-color;
 		text-transform: uppercase;
 	}
 
 	.mobile-menu-btn {
 		display: none;
 	}
-	
+
 	.mobile-header-elements {
 		display: none;
 	}
@@ -679,7 +677,7 @@ main {
 		padding: 10px;
 	}
 
-	.footer-copyright{
+	.footer-copyright {
 		display: flex;
 		justify-content: space-between;
 		padding: 10px;
