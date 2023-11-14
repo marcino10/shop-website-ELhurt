@@ -23,6 +23,16 @@ button:hover {
 	cursor: pointer;
 }
 
+//classes for js
+.hide {
+	opacity: 0 !important;
+}
+
+.display-none {
+	display: none !important;
+}
+//
+
 .bold-text {
 	font-weight: bold;
 }
@@ -61,6 +71,7 @@ button:hover {
 
 .fade-darken-bg,
 .full-darken-bg {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -87,50 +98,112 @@ button:hover {
 
 header {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 6vh;
+	max-height: 100px;
 	padding: 1rem 1rem;
+	background-color: $main-white;
 }
 
 .header-logo {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	height: 80%;
 	width: 60%;
 
 	img {
-		width: 100%;
+		height: 100%;
 	}
 }
 
-.fa-bars {
-	font-size: 45px;
+.mobile-menu-btn {
+	background-color: transparent;
+	font-size: calc(6vh - 2rem);
+}
+
+
+.mobile-header-elements {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 101;
+	width: 60vw;
+	min-width: 250px;
+	max-width: 400px;
+	height: 100vh;
+	padding: 2rem;
+	padding-left: 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $main-font-color;
+	background-color: $mobile-menu-bgc;
+	transform: translateX(100%);
+
+	a {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+	}
+
+	a:not(:first-of-type) {
+		margin-top: 10px;
+	}
+	
+	p {
+		text-align: left;
+	}
+	
+	i {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+		height: 50px;
+		font-size: 2em;
+	}
 }
 
 .header-elements {
 	display: none;
 }
 
+.mobile-header-elements,
+.mobile-menu-btn {
+	transition: transform 0.2s linear;
+}
+
+.top-nav {
+	display: none;
+}
+
 @media (min-width: 1200px) {
 	header {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
 		padding: 1rem 2rem;
 	}
 
 	.header-logo {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
 		width: 30%;
+		font-size: 1.3rem;
+		font-weight: bold;
+		color: $main-font-color;
+		text-transform: uppercase;
+	}
 
-		img {
-			height: 80%;
-			width: auto;
-		}
+	.mobile-menu-btn {
+		display: none;
+	}
+	
+	.mobile-header-elements {
+		display: none;
 	}
 
 	.header-elements {
@@ -553,13 +626,5 @@ header {
 		justify-content: space-between;
 		padding: 1.3rem 2rem;
 		text-align: center;
-	}
-
-	.hide {
-		opacity: 0 !important;
-	}
-
-	.display-none {
-		display: none !important;
 	}
 }

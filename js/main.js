@@ -1,3 +1,7 @@
+const mobileMenu = document.querySelector('.mobile-header-elements');
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+let isMobileMenuShow = false;
+
 const mainSliderBtns = document.querySelectorAll('.main-slider .slider-btn');
 const mainSlidesImages = document.querySelectorAll('.main-slider img');
 const mainSlidesText = document.querySelectorAll('.slide-content-wrapper');
@@ -6,6 +10,23 @@ const productSliderBtns = document.querySelectorAll('.product-slider-btn');
 const productStacks = document.querySelectorAll('.products-stack');
 let currentStack = 0;
 const numOfStacks = productStacks.length;
+
+const changeVisibilityMobileMenu = () => {
+	const widthOfMenu = mobileMenu.clientWidth;
+
+	if (isMobileMenuShow) {
+		mobileMenu.style.transform = `translateX(${widthOfMenu}px)`;
+		mobileMenuBtn.style.transform = 'translateX(0)';
+	} else {
+		mobileMenu.style.transform = 'translateX(0)';
+		mobileMenuBtn.style.transform = `translateX(-${widthOfMenu}px)`;
+	}
+
+	mobileMenuBtn.firstElementChild.classList.toggle('fa-bars');
+	mobileMenuBtn.firstElementChild.classList.toggle('fa-xmark');
+
+	isMobileMenuShow = !isMobileMenuShow;
+};
 
 const changeMainSlider = () => {
 	mainSlidesImages.forEach(slide => slide.classList.toggle('hide'));
@@ -40,5 +61,6 @@ const changeProductSlider = e => {
 	}
 };
 
+mobileMenuBtn.addEventListener('click', changeVisibilityMobileMenu);
 mainSliderBtns.forEach(btn => btn.addEventListener('click', changeMainSlider));
 productSliderBtns.forEach(btn => btn.addEventListener('click', changeProductSlider));
