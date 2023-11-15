@@ -1,3 +1,8 @@
+const smallRes = 576;
+const mediumRes = 768;
+const largeRes = 992;
+const XLargeRes = 1200;
+
 const mobileMenu = document.querySelector('.header__nav');
 const mobileMenuBtn = document.querySelector('.header__mobile-btn');
 let isMobileMenuShow = false;
@@ -5,10 +10,14 @@ let isMobileMenuShow = false;
 const mainSlider = document.querySelector('.main__slider');
 const mainSliderSlides = document.querySelectorAll('.slider__slide');
 
-const productSliderBtns = document.querySelectorAll('.product-slider-btn');
-const productStacks = document.querySelectorAll('.products-stack');
-let currentStack = 0;
-const numOfStacks = productStacks.length;
+const templateOfProduct = document.querySelector('.product');
+const ProductSlider = document.querySelector('.products__slider');
+const productSliderBtns = document.querySelectorAll('*[data-element="product-slider-btn"]');
+let amountInRow = null;
+let currentMove = 0;
+let maxMove = null;
+
+console.log(productSliderBtns);
 
 const changeVisibilityMobileMenu = () => {
 	const widthOfMenu = mobileMenu.clientWidth;
@@ -38,33 +47,54 @@ const changeMainSlider = () => {
 	});
 };
 
-const rightChangeProductSlider = () => {
-	if (currentStack < numOfStacks - 1) {
-		productStacks.forEach(stack => (stack.style.translate = `${(currentStack + 1) * -100}%`));
-		currentStack++;
-	} else {
-		productStacks.forEach(stack => (stack.style.translate = '0'));
-		currentStack = 0;
-	}
+const rightChangeProductSlider = products => {
+	if (currentMove < maxMove) currentMove++;
+	else currentMove = 0;
+	products.forEach(
+		product =>
+			(product.style.translate = `calc(${currentMove} * (${-100 * amountInRow}% - ${15 * amountInRow}px) )`)
+	);
 };
 
-const leftChangeProductSlider = () => {
-	if (currentStack === 0) {
-		productStacks.forEach(stack => (stack.style.translate = `${(numOfStacks - 1) * -100}%`));
-		currentStack = numOfStacks - 1;
-	} else {
-		productStacks.forEach(stack => (stack.style.translate = `${(currentStack - 1) * -100}%`));
-		currentStack--;
-	}
+const leftChangeProductSlider = products => {
+	if (currentMove > 0) currentMove--;
+	else currentMove = maxMove;
+	products.forEach(
+		product => (product.style.translate = `calc(${currentMove} * (${-100 * amountInRow}% - ${15 * amountInRow}px) )`)
+	);
 };
 
 const changeProductSlider = e => {
-	if (e.currentTarget.classList.contains('slider-left-btn')) {
-		leftChangeProductSlider();
+	const products = document.querySelectorAll('.product');
+
+	if (window.innerWidth < smallRes) {
+		amountInRow = 1;
+	} else if (window.innerWidth <= mediumRes) {
+		amountInRow = 2;
+	} else if (window.innerWidth <= largeRes) {
+		amountInRow = 3;
+	} else if (window.innerWidth <= XLargeRes) {
+		amountInRow = 4;
 	} else {
-		rightChangeProductSlider();
+		amountInRow = 5;
+	}
+
+	maxMove = Math.ceil(products.length / amountInRow) - 1;
+
+	if (e.currentTarget.classList.contains('btn--left')) {
+		leftChangeProductSlider(products);
+	} else {
+		rightChangeProductSlider(products);
 	}
 };
+
+const generateProductsInSlider = howMany => {
+	for (i = 0; i < howMany; i++) {
+		ProductSlider.appendChild(templateOfProduct.cloneNode('true'));
+	}
+};
+
+generateProductsInSlider(19);
 
 mobileMenuBtn.addEventListener('click', changeVisibilityMobileMenu);
 

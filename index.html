@@ -20,7 +20,7 @@
         <button class="header__mobile-btn">
             <i class="ti ti-menu-2"></i>
         </button>
-        <div class="header__nav">
+        <div class="nav header__nav">
             <a href="javascript:void(0)" class="nav__element">
                 <img src="./icons/phone.svg" alt="">
                 <p>kontakt</p>
@@ -48,7 +48,7 @@
             </a>
         </div>
     </header>
-    <nav class="nav">
+    <nav class="nav nav--top">
         <a href="javascript:void(0)" class="nav__link">
             <p class="text--bold">ŹRÓDŁA ŚWIATŁA</p>
         </a>
@@ -70,24 +70,24 @@
     </nav>
     <main class="main">
         <div class="main--padding">
-            <div class="main__slider">
+            <div class="main__slider slider">
                 <div class="fade-darken-bg"></div>
-                <div class="slider__slide">
+                <div class="slide slider__slide">
                     <img src="photos/slide_01.jpg" alt="example of SEDNA product" class="slide__img">
                     <div class="slide__text">
                         <h2 class="text--bold">Poznaj SEDNA</h2>
                         <h3>Schneider Electric</h3>
                         <p>Sedna to osprzęt elektroinstalacyjny o wyrazistym kształcie oraz unikalnej formie.</p>
-                        <button class="btn--main slide__btn text--bold">ZOBACZ WIĘCEJ</button>
+                        <button class="btn btn--main slide__btn text--bold">ZOBACZ WIĘCEJ</button>
                     </div>
                 </div>
-                <div class="slider__slide hide" aria-hidden="true">
+                <div class="slide slider__slide hide" aria-hidden="true">
                     <img class="slide__img" src="photos/slide_02.png" alt="example of HUE product">
                     <div class="slide__text">
                         <h2 class="text--bold">Philips HUE</h2>
                         <h3>Oświetl swój dom</h3>
                         <p>Wyobraź sobie, że jednym dotknięciem wyłączasz wszystkie światła.</p>
-                        <button class="btn--main slide__btn text--bold">ZOBACZ WIĘCEJ</button>
+                        <button class="btn btn--main slide__btn text--bold">ZOBACZ WIĘCEJ</button>
                     </div>
                 </div>
                 <button class="slider__btn btn--left">
@@ -103,163 +103,59 @@
                     <div class="fade-darken-bg"></div>
                     <h2>Pomoc eksperta</h2>
                     <h3>Doradzamy</h3>
-                    <button class="btn--main">Zobacz więcej</button>
+                    <button class="btn btn--main">Zobacz więcej</button>
                 </div>
                 <div class="see-more__element">
                     <img src="photos/img_03.jpg" alt="">
                     <div class="fade-darken-bg"></div>
                     <h2>Szukaj wygodnie</h2>
                     <h3>elhurt plus</h3>
-                    <button class="btn--main">Zobacz więcej</button>
+                    <button class="btn btn--main">Zobacz więcej</button>
                 </div>
                 <div class="see-more__element">
                     <img src="photos/img_04.jpg" alt="">
                     <div class="fade-darken-bg"></div>
                     <h2>Seria Unica</h2>
                     <h3>wyjątkowy wzór</h3>
-                    <button class="btn--main">Zobacz więcej</button>
+                    <button class="btn btn--main">Zobacz więcej</button>
                 </div>
             </div>
             <div class="products">
                 <h2 class="text--bold">Polecane produkty</h2>
                 <div class="middle-red-line"></div>
-                <div class="products__slider">
+                <div class="products__slider slider">
                     <button class="slider__btn btn--left" data-element="product-slider-btn">
                         <img src="./icons/white-arrow.svg" alt="">
                     </button>
-                    <div class="products-stack">
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <div class="text-wrapper">
-                                <h3>łącznik jednobiegunowy</h3>
-                                <p class="product-code">Kod produktu: CW10V11</p>
-                                <p class="old-price">656,65 zł</p>
-                                <p class="new-price">442,85 zł</p>
-                            </div>
-                            <div class="buy-product-wrapper">
-                                <div class="num-of-products">
-                                    <button class="decrease-products-btn">
-                                        <i class="ti ti-minus"></i>
-                                    </button>
-                                    <p>1</p>
-                                    <button class="increase-products-btn">
-                                        <i class="ti ti-plus"></i>
-                                    </button>
-                                </div>
-                                <button class="add-product-btn">
-                                    <img src="./icons/shopping-cart.svg" alt="">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                    </div>
-                    <div class="products-stack">
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                    </div>
-                    <div class="products-stack">
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                        <div class="product">
-                            <img src="photos/bulb.jpg" alt="">
-                            <h3>lacznik jednobiegunowy</h3>
-                            <p class="product-code">Kod produktu: CW10V11</p>
-                            <p class="old-price">656,65 zl</p>
-                            <p class="new-price">442,85 zl</p>
-                        </div>
-                    </div>
                     <button class="slider__btn btn--right" data-element="product-slider-btn">
                         <img src="./icons/white-arrow.svg" alt="">
                     </button>
+                    <div class="product">
+                        <img src="photos/bulb.jpg" alt="" class="product__img">
+                        <div class="product__text">
+                            <h3>łącznik jednobiegunowy</h3>
+                            <p class="product__code">Kod produktu: CW10V11</p>
+                            <p class="price price--old">656,65 zł</p>
+                            <p class="price price--new">442,85 zł</p>
+                        </div>
+                        <div class="product__buy">
+                            <div class="amount-of-products">
+                                <button>
+                                    <i class="ti ti-minus"></i>
+                                </button>
+                                <p>1</p>
+                                <button>
+                                    <i class="ti ti-plus"></i>
+                                </button>
+                            </div>
+                            <button class="btn btn--buy">
+                                <img src="./icons/shopping-cart-white.svg" alt="" class="cart__img">
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <button class="btn--main">zobacz wszystkie informacje</button>
             </div>
+            <button class="btn btn--main products__btn">zobacz wszystkie informacje</button>
         </div>
         <div class="why-us">
             <div class="full-darken-bg"></div>
@@ -284,12 +180,12 @@
                         <h3>bezpieczne zwroty</h3>
                     </div>
                 </div>
-                <button class="btn--main">Informacje o firmie</button>
+                <button class="btn btn--main">Informacje o firmie</button>
             </div>
         </div>
     </main>
     <footer class="footer">
-        <nav class="footer__nav">
+        <nav class="nav footer__nav">
             <div class="nav__column">
                 <h2>Informacje</h2>
                 <div class="bottom-nav-line"></div>
