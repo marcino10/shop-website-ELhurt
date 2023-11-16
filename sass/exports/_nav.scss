@@ -2,29 +2,17 @@
 
 .header {
 	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	position: sticky;
 	top: 0;
 	z-index: 100;
 	width: 100%;
-	height: 10vh;
-	max-height: 100px;
-	padding: 1rem 1rem;
+	padding: 1rem 2rem;
 	background-color: v.$main-white;
-}
 
-.header__logo {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	height: 80%;
-	width: 60%;
-
-	img {
-		height: 100%;
+	h1 {
+		width: 250px;
 	}
 }
 
@@ -54,9 +42,6 @@
 	max-width: 400px;
 	height: 100vh;
 	padding: 2rem;
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: v.$main-font-color;
 	background-color: v.$mobile-menu-bgc;
 	transform: translateX(100%);
 
@@ -76,23 +61,16 @@
 	align-items: center;
 }
 
+.nav__img {
+	height: 28px;
+	object-fit: fill;
+}
+
 .nav__element:not(:first-of-type) {
 	margin-top: 10px;
 }
 
 @media (min-width: 992px) {
-	.header {
-		padding: 1rem 2rem;
-	}
-
-	.header__logo {
-		width: 30%;
-		font-size: 1.3rem;
-		font-weight: bold;
-		color: v.$main-font-color;
-		text-transform: uppercase;
-	}
-
 	.header__mobile-btn {
 		display: none;
 	}
@@ -103,14 +81,13 @@
 
 	.header__nav {
 		flex-flow: row nowrap;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
+		gap: 50px;
 		position: static;
-		width: 70%;
-		min-width: none;
-		max-width: none;
-		height: auto;
+		height: 100%;
 		padding: 0;
+		white-space: nowrap;
 		background-color: transparent;
 		transform: translateX(0);
 
@@ -125,24 +102,60 @@
 	}
 
 	.nav__element--cart {
-		height: 100%;
-		width: 25%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50px;
 		border: v.$main-border;
-		padding: 0.5rem;
 	}
 
-	.element__cart {
-		height: 100%;
-		width: 30%;
+	.nav__cart {
+		position: relative;
+		height: 80%;
+		padding: 0 1rem;
+
+		.nav__img {
+			height: 100%;
+		}
 	}
 
-	.cart__img {
-		height: 60%;
+	.cart__num-products {
+		position: absolute;
+		top: 20%;
+		right: 0;
+		translate: 0 -50%;
+		padding: 2px 5px 1px;
+		border-radius: 3px;
+		background-color: v.$buy-btn-color;
+
+		p {
+			font-size: 10px;
+		}
 	}
 
 	.element__price {
-		p:last-child {
-			font-weight: normal;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 80%;
+		padding: 0 2rem;
+		line-height: 1.1em;
+		border-left: v.$main-border;
+	}
+
+	.element__arrow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: calc(100% + 2px);
+		padding: 0 1rem;
+		background-color: v.$buy-btn-color;
+
+		img {
+			height: 12px;
+			width: 8px;
+			object-fit: fill;
 		}
 	}
 
