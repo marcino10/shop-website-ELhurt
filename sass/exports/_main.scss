@@ -1,0 +1,66 @@
+@use './variables' as v;
+
+.text {
+	font-size: 14px;
+	color: v.$main-font-color;
+}
+
+.text--bold {
+	font-weight: bold;
+}
+
+.text--white {
+	color: v.$main-white;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.btn--main {
+	padding: 1.5rem 3rem;
+	color: v.$main-white;
+	background-color: v.$additional-element-color;
+}
+
+.btn--buy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 0 1rem;
+	background-color: v.$buy-btn-color;
+}
+
+.btn--left {
+	left: 0;
+}
+
+.btn--right {
+	right: 0;
+	rotate: 180deg;
+}
+
+.darken-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.darken-bg--fade {
+	background: linear-gradient(90deg, black, transparent);
+	opacity: 55%;
+}
+
+.darken-bg--full {
+	background-color: rgb(37, 37, 37);
+	opacity: 50%;
+}

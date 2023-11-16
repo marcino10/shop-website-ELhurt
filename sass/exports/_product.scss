@@ -1,0 +1,84 @@
+@use './variables' as v;
+
+.product {
+	padding: 0 2rem 3rem;
+	font-size: 1rem;
+	color: v.$main-font-color;
+	background-color: v.$main-white;
+}
+
+.product__img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	padding: 4rem 0;
+}
+
+.product__text {
+	translate: 0 36px;
+	transition: translate 0.1s 0.1s cubic-bezier(0.11, 0.93, 0.33, 0.38);
+
+	h3 {
+		font-size: larger;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
+.product__code {
+	padding-top: 0.5rem;
+	padding-bottom: 1rem;
+}
+
+.price {
+	font-size: 1.2em;
+	line-height: 1.3em;
+}
+
+.price--old {
+	color: v.$old-price-font-color;
+	text-decoration: line-through;
+}
+
+.price--new {
+	font-weight: bold;
+}
+
+.product__buy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	height: 36px;
+	opacity: 0;
+	transition: opacity 0s 0.1s cubic-bezier(0.11, 0.93, 0.33, 0.38);
+}
+
+.amount-of-products {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	border: 1px solid lightgray;
+	font-size: 14px;
+
+	button {
+		height: 100%;
+		font-size: 0.8em;
+		padding: 0 0.5rem;
+	}
+
+	p {
+		padding: 0 2rem;
+	}
+}
+
+.product:hover {
+	.product__buy {
+		opacity: 1;
+	}
+
+	.product__text {
+		translate: 0 -10px;
+	}
+}
