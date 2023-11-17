@@ -38,7 +38,8 @@ const changeVisibilityMobileMenu = () => {
 
 const changeMainSlider = () => {
 	mainSliderSlides.forEach(slide => {
-		slide.classList.toggle('hide');
+		slide.firstElementChild.classList.toggle('hide');
+		slide.lastElementChild.classList.toggle('display-none');
 		if (slide.getAttribute('aria-hidden') === 'true') {
 			slide.removeAttribute('aria-hidden');
 		} else {
@@ -60,7 +61,8 @@ const leftChangeProductSlider = products => {
 	if (currentMove > 0) currentMove--;
 	else currentMove = maxMove;
 	products.forEach(
-		product => (product.style.translate = `calc(${currentMove} * (${-100 * amountInRow}% - ${15 * amountInRow}px) )`)
+		product =>
+			(product.style.translate = `calc(${currentMove} * (${-100 * amountInRow}% - ${15 * amountInRow}px) )`)
 	);
 };
 
