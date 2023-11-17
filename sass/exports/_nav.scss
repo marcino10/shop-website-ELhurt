@@ -99,8 +99,67 @@
 	display: none;
 }
 
-@media (min-width: v.$laptop-sm) {
+.footer {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	overflow-x: hidden;
+}
 
+.footer__nav {
+	flex-wrap: wrap;
+	width: 100%;
+	font-size: 1.5rem;
+	background-color: v.$additional-bgc;
+
+	h2 {
+		font-size: 1rem;
+		color: v.$main-white;
+		text-transform: uppercase;
+	}
+}
+
+.nav__column {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	min-width: 50%;
+	max-width: 50%;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.column__list {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 2rem;
+	font-size: 1rem;
+	color: v.$nav-font-color;
+}
+
+.footer__copyright {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 2rem;
+}
+
+.bottom-nav-line {
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, rgb(247, 64, 54) 0 8%, rgb(96, 101, 102) 8% 90%);
+	margin-bottom: 2rem;
+	color: rgb(96, 101, 102);
+}
+
+@media (min-width: v.$tablet-lg) {
+	.nav__column {
+		min-width: 25%;
+		max-width: 25%;
+	}
+}
+
+@media (min-width: v.$laptop-sm) {
 	.logo {
 		height: 59px;
 	}
@@ -195,57 +254,6 @@
 		color: v.$main-font-color;
 		text-decoration: none;
 		font-size: 1.1rem;
-	}
-
-	.footer {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.footer__nav {
-		gap: 2rem;
-		width: 100%;
-		padding: 2rem 2rem 3rem;
-		font-size: 1.5rem;
-		background-color: v.$additional-bgc;
-
-		h2 {
-			font-size: 1rem;
-			color: v.$main-white;
-			text-transform: uppercase;
-		}
-	}
-
-	.nav__column {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-		width: 25%;
-		gap: 2rem;
-	}
-
-	.column__list {
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		gap: 2rem;
-		font-size: 1rem;
-		color: v.$nav-font-color;
-	}
-
-	.footer__copyright {
-		display: flex;
-		justify-content: space-between;
-		padding: 1.5rem 2rem;
-	}
-
-	.bottom-nav-line {
-		width: 100%;
-		height: 2px;
-		background: linear-gradient(90deg, rgb(247, 64, 54) 0 8%, rgb(96, 101, 102) 8% 90%);
-		margin-bottom: 2rem;
-		color: rgb(96, 101, 102);
 	}
 }
 
