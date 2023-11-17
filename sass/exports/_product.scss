@@ -1,21 +1,20 @@
 @use './variables' as v;
 
 .product {
-	padding: 0 2rem 3rem;
 	font-size: 1rem;
 	color: v.$main-font-color;
 	background-color: v.$main-white;
+	padding-bottom: 2rem;
 }
 
 .product__img {
 	width: 100%;
 	height: 100%;
 	object-fit: fill;
-	padding: 4rem 0;
 }
 
 .product__text {
-	translate: 0 36px;
+	translate: 0 -10px;
 	transition: translate 0.1s cubic-bezier(0.11, 0.93, 0.33, 0.38);
 
 	h3 {
@@ -50,8 +49,6 @@
 	align-items: center;
 	gap: 5px;
 	height: 36px;
-	opacity: 0;
-	transition: opacity 0s cubic-bezier(0.11, 0.93, 0.33, 0.38);
 }
 
 .amount-of-products {
@@ -73,12 +70,34 @@
 	}
 }
 
-.product:hover {
-	.product__buy {
-		opacity: 1;
+.cart__img {
+	aspect-ratio: 1 / 1;
+	height: 60%;
+}
+
+@media (hover: hover) {
+	.product__text {
+		translate: 0 36px;
 	}
 
-	.product__text {
-		translate: 0 -10px;
+	.product__buy {
+		opacity: 0;
+		transition: opacity 0s cubic-bezier(0.11, 0.93, 0.33, 0.38);
+	}
+
+	.product:hover {
+		.product__buy {
+			opacity: 1;
+		}
+
+		.product__text {
+			translate: 0 -10px;
+		}
+	}
+}
+
+@media (min-width: v.$laptop-sm) {
+	.product__img {
+		padding: 4rem 0;
 	}
 }

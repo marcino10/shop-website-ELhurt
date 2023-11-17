@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <h1>
-            <img class="logo" src="./photos/logo.png" alt="ELhurt logo">
+            <img class="logo" src="./photos/logo.png " alt="ELhurt logo">
         </h1>
         <button class="header__mobile-btn">
             <i class="ti ti-menu-2"></i>
@@ -70,10 +70,13 @@
     </nav>
     <main class="main">
         <div class="main--padding">
-            <div class="main__slider slider">
+            <div class="main__slider slider text text--white">
                 <div class="darken-bg darken-bg--fade"></div>
                 <div class="slide slider__slide">
-                    <img src="photos/slide_01.jpg" alt="example of SEDNA product" class="slide__img">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="photos/slide_01.jpg">
+                        <img class="slide__img" src="photos/slide_small.jpg" alt="example of SEDNA product">
+                    </picture>
                     <div class="slide__text">
                         <h2 class="text--bold">Poznaj SEDNA</h2>
                         <h3>Schneider Electric</h3>
@@ -82,7 +85,10 @@
                     </div>
                 </div>
                 <div class="slide slider__slide hide" aria-hidden="true">
-                    <img class="slide__img" src="photos/slide_02.png" alt="example of HUE product">
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="photos/slide_02.png">
+                        <img class="slide__img" src="photos/slide_small2.png" alt="example of HUE product">
+                    </picture>
                     <div class="slide__text">
                         <h2 class="text--bold">Philips HUE</h2>
                         <h3>Oświetl swój dom</h3>
