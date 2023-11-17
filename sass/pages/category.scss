@@ -3,3 +3,70 @@
 @use '../exports/main';
 @use '../exports/nav';
 @use '../exports/product';
+
+.path {
+	display: flex;
+	flex-direction: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	text-transform: uppercase;
+	gap: 25px;
+	padding: 15px;
+	background-color: v.$main-section-bgc;
+}
+
+.parameters {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 25%;
+	padding: 25px;
+	text-align: left;
+}
+.list--model {
+	.list {
+		list-style: none;
+		border: 1px solid v.$nav-font-color;
+		text-transform: uppercase;
+		padding: 15px;
+	}
+	li:first-child {
+		border-bottom: 1px solid v.$additional-element-color;
+	}
+	li:nth-child(2) {
+		border-top: 1px solid v.$additional-element-color;
+	}
+}
+
+.list {
+	list-style: none;
+	border: 1px solid v.$nav-font-color;
+	text-transform: uppercase;
+	padding: 15px;
+   
+}
+
+.filter {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	list-style: none;
+	border: 1px solid v.$nav-font-color;
+	padding: 25px;
+	background-color: v.$main-section-bgc;
+}
+
+.list--parameter{
+    text-transform: uppercase;
+
+}
+.list__parameters{
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	padding: 10px;
+    text-transform: none;
+}
+.parameter{
+    border: 1px solid v.$nav-font-color;
+}
