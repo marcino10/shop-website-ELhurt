@@ -39,6 +39,16 @@
 	width: 100%;
 }
 
+.main__slider {
+	width: 100%;
+	height: 60vh;
+	min-height: 500px;
+
+	.fade-darken-bg {
+		background: linear-gradient(90deg, black, rgb(20, 20, 20) 30%, transparent 50%);
+	}
+}
+
 .main__see-more {
 	display: flex;
 	width: 100%;
@@ -184,19 +194,19 @@
 	margin: 0 auto;
 }
 
-@media (min-width: 576px) {
+@media (min-width: v.$tablet-sm) {
 	.slider__product {
 		min-width: calc(50% - 0.75rem);
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: v.$tablet-lg) {
 	.slider__product {
 		min-width: calc(33.33% - 1rem);
 	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: v.$laptop-sm) {
 	.main--padding {
 		padding: 2rem;
 		background-color: v.$main-section-bgc;

@@ -16,7 +16,7 @@
 
 .product__text {
 	translate: 0 36px;
-	transition: translate 0.1s 0.1s cubic-bezier(0.11, 0.93, 0.33, 0.38);
+	transition: translate 0.1s cubic-bezier(0.11, 0.93, 0.33, 0.38);
 
 	h3 {
 		font-size: larger;
@@ -51,7 +51,7 @@
 	gap: 5px;
 	height: 36px;
 	opacity: 0;
-	transition: opacity 0s 0.1s cubic-bezier(0.11, 0.93, 0.33, 0.38);
+	transition: opacity 0s cubic-bezier(0.11, 0.93, 0.33, 0.38);
 }
 
 .amount-of-products {
