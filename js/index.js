@@ -18,8 +18,9 @@ let currentMove = 0;
 let maxMove = null;
 let isSpecialMove = false;
 let lengthSpecialMove = null;
-
-console.log(productSliderBtns);
+let productAmounts = null;
+let productAmountBtnMinus = [];
+let productAmountBtnPlus = [];
 
 const changeVisibilityMobileMenu = () => {
 	const widthOfMenu = mobileMenu.clientWidth;
@@ -113,10 +114,32 @@ const generateProductsInSlider = howMany => {
 	}
 };
 
+const decreaseProductAmount = e => {
+	let amount = e.currentTarget.nextElementSibling;
+	if (amount.value > 1) {
+		amount.value = parseInt(amount.value) - 1;
+	}
+};
+
+const increaseProductAmount = e => {
+	let amount = e.currentTarget.previousElementSibling;
+	amount.value = parseInt(amount.value) + 1;
+};
+
 generateProductsInSlider(17);
+
+productAmounts = document.querySelectorAll('.amount-of-products');
+
+for (product of productAmounts) {
+	productAmountBtnMinus.push(product.firstElementChild);
+	productAmountBtnPlus.push(product.lastElementChild);
+}
 
 mobileMenuBtn.addEventListener('click', changeVisibilityMobileMenu);
 
 mainSlider.addEventListener('click', changeMainSlider);
 
 productSliderBtns.forEach(btn => btn.addEventListener('click', changeProductSlider));
+
+productAmountBtnMinus.forEach(btn => btn.addEventListener('click', decreaseProductAmount));
+productAmountBtnPlus.forEach(btn => btn.addEventListener('click', increaseProductAmount));
