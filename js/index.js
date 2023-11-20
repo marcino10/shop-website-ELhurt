@@ -16,6 +16,8 @@ const productSliderBtns = document.querySelectorAll('*[data-element="product-sli
 let amountInRow = null;
 let currentMove = 0;
 let maxMove = null;
+let isSpecialMove = false;
+let lengthSpecialMove = null;
 
 console.log(productSliderBtns);
 
@@ -41,29 +43,39 @@ const changeMainSlider = () => {
 		slide.firstElementChild.classList.toggle('hide');
 		slide.lastElementChild.classList.toggle('display-none');
 		if (slide.getAttribute('aria-hidden') === 'true') {
-			slide.removeAttribute('aria-hidden');
+			slide.removeAttribudte('aria-hidden');
 		} else {
 			slide.setAttribute('aria-hidden', 'true');
 		}
 	});
 };
 
+const moveProductSlider = products => {
+	if (isSpecialMove && currentMove === maxMove) {
+		products.forEach(
+			product =>
+				(product.style.translate = `calc(${currentMove - 1} * (${-100 * amountInRow}% - ${
+					15 * amountInRow
+				}px) + (${-100 * lengthSpecialMove}% - ${15 * lengthSpecialMove}px) )`)
+		);
+	} else {
+		products.forEach(
+			product =>
+				(product.style.translate = `calc(${currentMove} * (${-100 * amountInRow}% - ${15 * amountInRow}px) )`)
+		);
+	}
+};
+
 const rightChangeProductSlider = products => {
 	if (currentMove < maxMove) currentMove++;
 	else currentMove = 0;
-	products.forEach(
-		product =>
-			(product.style.translate = `calc(${currentMove} * (${-100 * amountInRow}% - ${15 * amountInRow}px) )`)
-	);
+	moveProductSlider(products);
 };
 
 const leftChangeProductSlider = products => {
 	if (currentMove > 0) currentMove--;
 	else currentMove = maxMove;
-	products.forEach(
-		product =>
-			(product.style.translate = `calc(${currentMove} * (${-100 * amountInRow}% - ${15 * amountInRow}px) )`)
-	);
+	moveProductSlider(products);
 };
 
 const changeProductSlider = e => {
@@ -71,14 +83,19 @@ const changeProductSlider = e => {
 
 	if (window.innerWidth < smallRes) {
 		amountInRow = 1;
-	} else if (window.innerWidth <= mediumRes) {
+	} else if (window.innerWidth < mediumRes) {
 		amountInRow = 2;
-	} else if (window.innerWidth <= largeRes) {
+	} else if (window.innerWidth < largeRes) {
 		amountInRow = 3;
-	} else if (window.innerWidth <= XLargeRes) {
+	} else if (window.innerWidth < XLargeRes) {
 		amountInRow = 4;
 	} else {
 		amountInRow = 5;
+	}
+
+	if (products.length % amountInRow != 0) {
+		isSpecialMove = true;
+		lengthSpecialMove = products.length % amountInRow;
 	}
 
 	maxMove = Math.ceil(products.length / amountInRow) - 1;
@@ -96,7 +113,7 @@ const generateProductsInSlider = howMany => {
 	}
 };
 
-generateProductsInSlider(19);
+generateProductsInSlider(17);
 
 mobileMenuBtn.addEventListener('click', changeVisibilityMobileMenu);
 
