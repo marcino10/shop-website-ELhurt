@@ -29,12 +29,6 @@
 	}
 }
 
-.middle-red-line {
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(90deg, lightgray 0 47.5%, red 47.5% 52.5%, lightgray 52.5% 100%);
-}
-
 .slider {
 	position: relative;
 }
@@ -177,6 +171,16 @@
 		font-size: 34px;
 	}
 
+	h2::after {
+		display: block;
+		content: '';
+		width: calc(100% + 4rem);
+		height: 2px;
+		margin-top: 2rem;
+		margin-left: -2rem;
+		background: linear-gradient(90deg, rgba(75, 71, 71, 0.2) 0 47.5%, red 47.5% 52.5%, rgba(75, 71, 71, 0.2) 52.5% 100%);
+	}
+
 	.middle-red-line {
 		width: 100%;
 	}
@@ -218,7 +222,18 @@
 	background-position: top;
 
 	h2 {
+		display: inline-block;
+		width: 100%;
 		font-size: 44px;
+	}
+
+	h2::after {
+		display: block;
+		content: '';
+		width: 100%;
+		height: 2px;
+		margin: 2rem 0;
+		background: linear-gradient(90deg, rgba(212, 212, 212,0.1) 47.5%, red 47.5% 52.5%, rgba(212, 212, 212,0.1) 52.5% 100%);
 	}
 
 	p {
