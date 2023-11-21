@@ -4,6 +4,18 @@
 @use '../exports/nav';
 @use '../exports/product';
 
+.arrow--up {
+	rotate: 90deg;
+}
+
+.arrow--down {
+	rotate: -90deg;
+}
+
+.text--inline {
+	display: inline-block;
+}
+
 .path {
 	display: flex;
 	flex-direction: row nowrap;
@@ -11,46 +23,64 @@
 	align-items: center;
 	text-transform: uppercase;
 	gap: 25px;
-	padding: 15px;
+	padding: 2rem;
+	padding-bottom: 1.5rem;
 	background-color: v.$main-section-bgc;
 }
-.name-of-product {
-	font-size: 44px;
-	padding-left: 25px;
+
+.main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 2rem;
+	width: 100%;
+	padding: 2rem;
 }
 
-.products {
-	display: flex;
-	flex-direction: row;
-	margin-top: 30px;
-	margin-left: 30px;
-	margin-bottom: 30px;
-	gap: 100px;
+.main__header {
+	margin-bottom: 2rem;
+	min-width: 100%;
 }
-.product__list {
+
+.photos-list {
 	display: flex;
-	flex-direction: column;
-	width: 50px;
-	height: 100%;
+	flex-flow: column nowrap;
 	gap: 5px;
-	margin-top: 30px;
-	img {
-		border: 1px solid v.$nav-font-color;
-	}
 }
-.buying__menu {
+
+.photos-list__btn {
+	width: 70px;
+	padding: 1rem 0;
+	background-color: v.$arrow-btn-color;
+}
+
+.photos-list__img {
+	width: 70px;
+	height: 70px;
+	border: v.$main-border;
+}
+
+.photos {
 	display: flex;
-	width: 100px;
-	height: 100px;
-	border: 1px solid v.$nav-font-color;
+	justify-content: center;
+	width: 55%;
+	position: relative;
 }
-.main__product {
-	img {
-		display: block;
-		width: 350px;
-		height: 350px;
-	}
+
+.photos__img {
+	height: 400px;
+	width: 400px;
 }
+
+.buy-section {
+	height: 100%;
+}
+
+.buy-section__buy {
+	
+}
+
 .anchor {
 	display: flex;
 	flex-direction: row nowrap;
@@ -60,6 +90,7 @@
 	padding: 15px;
 	background-color: v.$main-section-bgc;
 }
+
 .product--description-btn {
 	text-transform: uppercase;
 	background-color: v.$additional-element-color;
@@ -68,6 +99,7 @@
 	color: v.$main-white;
 	font-size: 14px;
 }
+
 .technical--data-btn {
 	text-transform: uppercase;
 	color: v.$main-font-color;
@@ -76,20 +108,18 @@
 	width: 185px;
 	font-size: 14px;
 }
+
 .other-from-categori-btn {
 	text-transform: uppercase;
 	color: v.$main-font-color;
 	background: v.$main-white;
 	height: 40px;
 	width: 185px;
-	font-size: 14px;	
+	font-size: 14px;
 }
-.gray--line{
+
+.gray--line {
 	border: 2px solid v.$nav-font-color;
 	height: 2px;
 	width: 100%;
 }
-.lead{
-	
-}
-

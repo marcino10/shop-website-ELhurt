@@ -12,38 +12,38 @@
 
 <body>
     <header class="header">
-        <div class="header__logo">
-            <h1>
-                <img src="./photos/logo.png" alt="ELhurt logo">
-            </h1>
-        </div>
+        <h1>
+            <img class="logo" src="./photos/logo.png " alt="ELhurt logo">
+        </h1>
         <button class="header__mobile-btn">
             <i class="ti ti-menu-2"></i>
         </button>
-        <div class="nav header__nav">
+        <div class="nav header__nav text text--bold">
             <a href="javascript:void(0)" class="nav__element">
-                <img src="./icons/phone.svg" alt="">
+                <img src="./icons/phone.svg" aria-hidden="true" class="nav__img">
                 <p>kontakt</p>
             </a>
             <a href="javascript:void(0)" class="nav__element">
-                <img src="./icons/star.svg" alt="">
+                <img src="./icons/star.svg" aria-hidden="true" class="nav__img">
                 <p>ulubione</p>
             </a>
             <a href="javascript:void(0)" class="nav__element">
-                <img src="./icons/user.svg" alt="">
+                <img src="./icons/user.svg" aria-hidden="true" class="nav__img">
                 <p>moje konto</p>
             </a>
             <a href="javascript:void(0)" class="nav__element nav__element--cart">
-                <div class="element__cart">
-                    <div class="cart__num-products"></div>
-                    <img src="./icons/shopping-cart.svg" alt="" class="cart__img">
+                <div class="nav__cart">
+                    <div class="cart__num-products">
+                        <p class="text--white">342</p>
+                    </div>
+                    <img src="./icons/shopping-cart.svg" aria-hidden="true" class="nav__img ">
                 </div>
                 <div class="element__price">
                     <p>twój koszyk</p>
-                    <p>3456,00 zl</p>
+                    <p class="text">3456,00 zl</p>
                 </div>
                 <div class="element__arrow">
-                    <img src="./icons/white-arrow.svg" alt="" class="arrow__img">
+                    <img src="./icons/white-arrow.svg" aria-hidden="true" class="nav__img btn--right">
                 </div>
             </a>
         </div>
@@ -73,21 +73,57 @@
         <p>kategoria</p>
         <p>kategoria</p>
     </div>
-    <div class="description-of-product">
-        <h1 class="name-of-product text--bold">Łącznik jednobiegunowy (moduł) 10AX.250V~,zaciski śrubowe</h1>
-    </div>
-    <section class="products">
-        <div class="product__list">
-            <img src="./photos/bulb_small.jpg.jpg" alt="">
-            <img src="./photos/bulb_small.jpg.jpg" alt="">
-            <img src="./photos/bulb_small.jpg.jpg" alt="">
-            <img src="./photos/bulb_small.jpg.jpg" alt="">
-            <img src="./photos/bulb_small.jpg.jpg" alt="">
+    <main class="main">
+        <h1 class="text text--header main__header">Łącznik jednobiegunowy (moduł) 10AX, 250V~, zaciski śrubowe</h1>
+        <div class="photos-list">
+            <button class="btn photos-list__btn">
+                <img class="arrow--up" src="./icons/white-arrow.svg" alt="left arrow">
+            </button>
+            <img class="photos-list__img" src="photos/bulb_small.jpg" alt="">
+            <img class="photos-list__img" src="photos/bulb_small.jpg" alt="">
+            <img class="photos-list__img" src="photos/bulb_small.jpg" alt="">
+            <img class="photos-list__img" src="photos/bulb_small.jpg" alt="">
+            <img class="photos-list__img" src="photos/bulb_small.jpg" alt="">
+            <button class="btn photos-list__btn">
+                <img class="arrow--down" src="./icons/white-arrow.svg" alt="left arrow">
+            </button>
         </div>
-        <div class="main__product"><img src="./photos/bulb_big.jpg.jpg" alt=""></div>
-        <div class="buying__menu"></div>
-    </section>
-    <div class="anchor">
+        <div class="photos">
+            <img class="photos__img" src="photos/bulb_big.jpg" alt="">
+            <button class="btn btn--slider btn--left">
+                <img src="./icons/white-arrow.svg" alt="left arrow">
+            </button>
+            <button class="btn btn--slider btn--right">
+                <img src="./icons/white-arrow.svg" alt="left arrow">
+            </button>
+        </div>
+        <div class="buy-section">
+            <!-- <div class="buy-section__info">
+                <p>IPC-HFW2231S-S-0280B</p>
+                <p class="text--inline">Dostepny</p>
+                <p class="text--inline">24h</p>
+            </div> -->
+            <div class="buy-section__versions"></div>
+            <div class="buy-section__buy">
+                <p class="price price--old">656,65 zl</p>
+                <p class="price price--new">442,85 zl</p>
+                <div class="amount-of-products">
+                    <button>
+                        <i class="ti ti-minus"></i>
+                    </button>
+                    <input class="amount-input" type="number" inputmode="numeric" value="1"></input>
+                    <button>
+                        <i class="ti ti-plus"></i>
+                    </button>
+                </div>
+                <button class="btn btn--buy">
+                    <img src="./icons/shopping-cart-white.svg" alt="" class="cart__img">
+                    <p class="text--white">Dodaj do koszyka</p>
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-- <div class="anchor">
         <button class="product--description-btn text--bold">Opis produktu</button>
         <button class="technical--data-btn text--bold">dane techniczne</button>
         <button class="other-from-categori-btn text--bold">inne z kategorii</button>
@@ -101,7 +137,6 @@
         <nav class="nav footer__nav">
             <div class="nav__column">
                 <h2>Informacje</h2>
-                <div class="bottom-nav-line"></div>
                 <ul class="column__list">
                     <li>Informacje o sklepie</li>
                     <li>Porady</li>
@@ -113,7 +148,6 @@
             </div>
             <div class="nav__column">
                 <h2>Informacje</h2>
-                <div class="bottom-nav-line"></div>
                 <ul class="column__list">
                     <li>Czas realizacji</li>
                     <li>Koszty przesyłki</li>
@@ -125,7 +159,6 @@
             </div>
             <div class="nav__column">
                 <h2>Moje konto</h2>
-                <div class="bottom-nav-line"></div>
                 <ul class="column__list">
                     <li>Logowanie</li>
                     <li>Rejestracja</li>
@@ -137,7 +170,6 @@
             </div>
             <div class="nav__column">
                 <h2>Informacje</h2>
-                <div class="bottom-nav-line"></div>
                 <ul class="column__list">
                     <li>Informacje o sklepie</li>
                     <li>Porady</li>
@@ -152,7 +184,7 @@
             <p>Copyright 2023. Wszystkie prawa zastrzeżone</p>
             <p>trol praktyki</p>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
