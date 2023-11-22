@@ -17,6 +17,15 @@
 
 .text--white {
 	color: v.$main-white;
+
+	a {
+		text-decoration: none;
+		color: v.$main-white;
+	}
+
+	a:visited {
+		color: v.$main-white;
+	}
 }
 
 .btn {
