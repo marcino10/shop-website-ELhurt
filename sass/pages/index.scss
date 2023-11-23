@@ -179,13 +179,9 @@
 		background: linear-gradient(
 			90deg,
 			rgba(75, 71, 71, 0.1) 0 47.5%,
-			red 47.5% 52.5%,
+			v.$additional-element-color 47.5% 52.5%,
 			rgba(75, 71, 71, 0.1) 52.5% 100%
 		);
-	}
-
-	.middle-red-line {
-		width: 100%;
 	}
 }
 
@@ -239,7 +235,7 @@
 		background: linear-gradient(
 			90deg,
 			rgba(212, 212, 212, 0.1) 47.5%,
-			red 47.5% 52.5%,
+			v.$additional-element-color 47.5% 52.5%,
 			rgba(212, 212, 212, 0.1) 52.5% 100%
 		);
 	}
@@ -251,10 +247,6 @@
 
 	*:not(.full-darken-bg) {
 		z-index: 10;
-	}
-
-	.middle-red-line {
-		margin: 2rem 0 4rem 0;
 	}
 }
 

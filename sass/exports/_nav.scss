@@ -4,16 +4,21 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 	position: sticky;
 	top: 0;
 	z-index: 100;
 	width: 100%;
-	padding: 1rem 2rem;
-	border-bottom: v.$main-border;
+	padding: 0 2rem;
+	padding-top: 1rem;
 	background-color: v.$main-white;
 
 	h1 {
 		width: 250px;
+	}
+
+	nav {
+		min-width: calc(100% + 2rem);
 	}
 }
 
@@ -147,7 +152,7 @@
 	content: '';
 	width: 100%;
 	height: 2px;
-	background: linear-gradient(90deg, rgba(247, 63, 54, 0.5) 0 25px, rgba(212, 212, 212,0.1) 25px 90%);
+	background: linear-gradient(90deg, rgba(247, 63, 54, 0.5) 0 25px, rgba(212, 212, 212, 0.1) 25px 90%);
 	margin-bottom: 1.5rem;
 }
 
@@ -249,8 +254,11 @@
 
 	.nav--top {
 		display: flex;
-		width: 100%;
-		padding: 1.5rem 2.4rem;
+		min-width: 100%;
+		padding: 1.5rem 2rem;
+		margin-top: 1rem;
+		margin-left: -2rem;
+		border-top: v.$main-border;
 		border-bottom: v.$main-border;
 	}
 

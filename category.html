@@ -12,62 +12,86 @@
 
 <body>
     <header class="header">
-        <div class="header__logo">
-            <h1>
-                <img src="./photos/logo.png" alt="ELhurt logo">
-            </h1>
-        </div>
+        <h1>
+            <img class="logo" src="./photos/logo.png " alt="ELhurt logo">
+        </h1>
         <button class="header__mobile-btn">
             <i class="ti ti-menu-2"></i>
         </button>
-        <div class="nav header__nav">
-            <a href="javascript:void(0)" class="nav__element">
-                <img src="./icons/phone.svg" alt="">
-                <p>kontakt</p>
-            </a>
-            <a href="javascript:void(0)" class="nav__element">
-                <img src="./icons/star.svg" alt="">
-                <p>ulubione</p>
-            </a>
-            <a href="javascript:void(0)" class="nav__element">
-                <img src="./icons/user.svg" alt="">
-                <p>moje konto</p>
-            </a>
-            <a href="javascript:void(0)" class="nav__element nav__element--cart">
-                <div class="element__cart">
-                    <div class="cart__num-products"></div>
-                    <img src="./icons/shopping-cart.svg" alt="" class="cart__img">
-                </div>
-                <div class="element__price">
-                    <p>twój koszyk</p>
-                    <p>3456,00 zl</p>
-                </div>
-                <div class="element__arrow">
-                    <img src="./icons/white-arrow.svg" alt="" class="arrow__img">
-                </div>
-            </a>
-        </div>
+        <ul class="nav header__nav text text--bold">
+            <li>
+                <a href="javascript:void(0)" class="nav__element">
+                    <img src="./icons/phone.svg" alt="phone icon" aria-hidden="true" class="nav__img">
+                    <p>kontakt</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="nav__element">
+                    <img src="./icons/star.svg" alt="star icon" aria-hidden="true" class="nav__img">
+                    <p>ulubione</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="nav__element">
+                    <img src="./icons/user.svg" alt="user icon" aria-hidden="true" class="nav__img">
+                    <p>moje konto</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="nav__element nav__element--cart">
+                    <div class="nav__cart">
+                        <div class="cart__num-products">
+                            <p class="text--white">342</p>
+                        </div>
+                        <img src="./icons/shopping-cart.svg" alt="shopping cart icon" aria-hidden="true"
+                            class="nav__img ">
+                    </div>
+                    <div class="element__price">
+                        <p>twój koszyk</p>
+                        <p class="text">3456,00 zl</p>
+                    </div>
+                    <div class="element__arrow">
+                        <img src="./icons/white-arrow.svg" alt="right arrow icon" aria-hidden="true"
+                            class="nav__img btn--right">
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <nav>
+            <ul class="nav nav--top">
+                <li>
+                    <a href="javascript:void(0)" class="nav__link">
+                        <p class="text--bold">ŹRÓDŁA ŚWIATŁA</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="nav__link">
+                        <p class="text--bold">OŚWIETLENIE WEWNĘTRZNE</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="nav__link">
+                        <p class="text--bold">GNIAZDKA, WYŁĄCZNIKI</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="nav__link">
+                        <p class="text--bold">AUTOMATYKA, STEROWANIE</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="nav__link">
+                        <p class="text--bold">ROZDZIELNIE I APARATURA</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="nav__link">
+                        <p class="text--bold">MATERIAŁY INSTALACYJNE</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <nav class="nav nav--top">
-        <a href="javascript:void(0)" class="nav__link">
-            <p class="text--bold">ŹRÓDŁA ŚWIATŁA</p>
-        </a>
-        <a href="javascript:void(0)" class="nav__link">
-            <p class="text--bold">OŚWIETLENIE WEWNĘTRZNE</p>
-        </a>
-        <a href="javascript:void(0)" class="nav__link">
-            <p class="text--bold">GNIAZDKA, WYŁĄCZNIKI</p>
-        </a>
-        <a href="javascript:void(0)" class="nav__link">
-            <p class="text--bold">AUTOMATYKA, STEROWANIE</p>
-        </a>
-        <a href="javascript:void(0)" class="nav__link">
-            <p class="text--bold">ROZDZIELNIE I APARATURA</p>
-        </a>
-        <a href="javascript:void(0)" class="nav__link">
-            <p class="text--bold">MATERIAŁY INSTALACYJNE</p>
-        </a>
-    </nav>
     <div class="path">
         <p>strona główna</p>
         <p>kategoria</p>
@@ -107,21 +131,18 @@
                     <input type="checkbox" name="Parametr" class="checkbox" /><label for="parameter">Parametr</label>
                 </li>
                 <li class="list__parameters">
-                    <input type="checkbox" name="Parametr" class="checkbox" /><label
-                    for="parameter">Parametr</label>
+                    <input type="checkbox" name="Parametr" class="checkbox" /><label for="parameter">Parametr</label>
                 </li>
                 <li class="list__parameters">
-                    <input type="checkbox" name="Parametr" class="checkbox" /><label
-                    for="parameter">Parametr</label>
+                    <input type="checkbox" name="Parametr" class="checkbox" /><label for="parameter">Parametr</label>
                 </li>
                 <li class="list__parameters">
-                    <input type="checkbox" class="checkbox" name="Parametr" /><label
-                    for="parameter">Parametr</label>
+                    <input type="checkbox" class="checkbox" name="Parametr" /><label for="parameter">Parametr</label>
                 </li>
                 <li>wiecej (10)</li>
 
             </ul>
-            
+
             <ul class="parameter color__filter">
                 <li>
                     <h2 class="list--parameter text--bold">kolor</h2>

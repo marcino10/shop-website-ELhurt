@@ -40,11 +40,12 @@ const changeVisibilityMobileMenu = () => {
 };
 
 const changeMainSlider = () => {
+	console.log(123);
 	mainSliderSlides.forEach(slide => {
 		slide.firstElementChild.classList.toggle('hide');
 		slide.lastElementChild.classList.toggle('display-none');
 		if (slide.getAttribute('aria-hidden') === 'true') {
-			slide.removeAttribudte('aria-hidden');
+			slide.removeAttribute('aria-hidden');
 		} else {
 			slide.setAttribute('aria-hidden', 'true');
 		}
