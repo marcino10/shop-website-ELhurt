@@ -4,7 +4,7 @@
 @use '../exports/nav';
 @use '../exports/product';
 
-.path {
+.breadcrumb {
 	display: flex;
 	flex-direction: row nowrap;
 	justify-content: flex-start;
