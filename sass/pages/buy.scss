@@ -16,7 +16,7 @@
 	display: inline-block;
 }
 
-.path {
+.breadcrumb {
 	display: flex;
 	flex-direction: row nowrap;
 	justify-content: flex-start;
@@ -77,10 +77,6 @@
 	height: 100%;
 }
 
-.buy-section__buy {
-	
-}
-
 .anchor {
 	display: flex;
 	flex-direction: row nowrap;
@@ -119,7 +115,80 @@
 }
 
 .gray--line {
-	border: 2px solid v.$nav-font-color;
+	border: 1px solid v.$nav-font-color;
 	height: 2px;
 	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 35px;
+}
+
+.lead {
+	display: flex;
+	font-size: 36px;
+	justify-content: center;
+}
+
+.middle-red-line {
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, lightgray 0 47.5%, red 47.5% 52.5%, lightgray 52.5% 100%);
+	margin-top: 25px;
+}
+
+.description {
+	display: flex;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-bottom: 30px;
+}
+
+.description--large {
+	display: flex;
+	font-size: 19px;
+	margin-top: 20px;
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-bottom: 30px;
+}
+
+.first-headline {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-left: 150px;
+}
+
+.second-headline {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-left: 150px;
+}
+
+.image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon-on-image {
+	position: absolute;
+}
+
+.basic-informations {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h2 {
+		font-size: 36px;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+}
+
+.second-middle-red-line {
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, lightgray 0 47.5%, red 47.5% 52.5%, lightgray 52.5% 100%);
+	margin-bottom: 35px;
 }
