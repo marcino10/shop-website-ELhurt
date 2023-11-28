@@ -1,14 +1,28 @@
-$main-white: #ffffff;
-$main-font-color: #111111;
+//colors
+$main-bgc: #ffffff;
+$secondary-bgc: #f2f3f4;
+$bottom-nav-bgc: #393e40;
 $additional-element-color: #f74137;
-$additional-bgc: #393e40;
-$nav-font-color: #cdcfcf;
-$main-section-bgc: #f2f3f4;
-$arrow-btn-color: #c1c2c6;
-$old-price-font-color: #a3a3a3;
 $buy-btn-color: #9bcb3b;
+$arrow-btn-color: #c1c2c6;
 $mobile-menu-bgc: #e6e0e0;
-$main-border: 1px solid #e1e2e8;
+$border-color: #e1e2e8;
+
+$old-price-font-color: #a3a3a3;
+$main-font-color: #111111;
+
+$main-border: 1px solid $border-color;
+
+//fonts
+$regular-fz: 14px;
+$medium-fz: 22px;
+$large-fz: 44px;
+$why-us-fz: 18px;
+
+//spaces
+$regular-space: 20px;
+$small-space: calc(0.5 * $regular-space);
+$large-space: calc(1.5 * $regular-space);
 
 //breakpoints
 $tablet-sm: 576px;

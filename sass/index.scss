@@ -46,7 +46,7 @@
 
 .main {
 	width: 100%;
-	background-color: v.$main-section-bgc;
+	background-color: v.$secondary-bgc;
 
 	&__slider {
 		width: 100%;
@@ -130,7 +130,7 @@
 	width: 100%;
 	height: 40vh;
 	min-height: 300px;
-	color: v.$main-white;
+	color: v.$main-bgc;
 	overflow: hidden;
 
 	img {
@@ -168,7 +168,7 @@
 .products {
 	padding: 3rem 0;
 	text-align: center;
-	background-color: v.$main-section-bgc;
+	background-color: v.$secondary-bgc;
 
 	h2 {
 		padding-bottom: 2rem;
@@ -215,7 +215,7 @@
 	margin-top: 3rem;
 	padding: 5rem 0;
 	text-align: center;
-	color: v.$main-white;
+	color: v.$main-bgc;
 	background-image: url(../photos/whyUsBanner.png);
 	background-size: cover;
 	background-position: top;
@@ -273,7 +273,7 @@
 
 		.btn--main {
 			margin-top: 20px;
-			border: 1px solid v.$main-white;
+			border: 1px solid v.$main-bgc;
 			background-color: transparent;
 			transition: background-color 0.2s linear;
 		}
